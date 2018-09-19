@@ -54,21 +54,24 @@ public class Checkout_step extends SetupClass {
 
 	@Then("^Filter the item to low price\\.$")
 	public void Filter_from_low() throws InterruptedException {
-		
-		boolean isPresent = driver.findElements(AddingObject.Home_Accessories).size() > 0;
-		if (isPresent) {
-	//	boolean web = driver.findElements(By.cssSelector(".sticky-mobile-sort-filter-bar-icon.icon.icon-sliders")).size()> 0;
-			
-	}
+		WebElement object1 = driver.findElement(By.id("ID1"));
+		WebElement object2 = driver.findElement(sort_mobile);
+		if (object1.isEnabled()){
+		    object1.click();
+		}else if (object2.isEnabled()){
+		          object2.click();
+		       
+		WebElement sortweb= driver.findElement(By.cssSelector(".sticky-mobile-sort-filter-bar-icon.icon.icon-sliders"));
+		sortweb.click();
+		Thread.sleep(2000);
+		Thread.sleep(2000);
+		driver.findElement(AddingObject.Low_price).click();
+		Thread.sleep(2000);
+		driver.findElement(AddingObject.Refine_product).click();
+		Thread.sleep(2000);
+		  }
 		else {
-			WebElement sortweb= driver.findElement(By.cssSelector(".sticky-mobile-sort-filter-bar-icon.icon.icon-sliders"));
-			sortweb.click();
-			Thread.sleep(2000);
-			Thread.sleep(2000);
-			driver.findElement(AddingObject.Low_price).click();
-			Thread.sleep(2000);
-			driver.findElement(AddingObject.Refine_product).click();
-			Thread.sleep(2000);
+			
 		}
 		}
 	@Then("^Select a item from the product\\.$")
