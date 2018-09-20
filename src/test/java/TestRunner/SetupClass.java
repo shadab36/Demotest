@@ -43,12 +43,9 @@ public class SetupClass {
 		platformName = property.getProperty("platform_name");
 		platform = property.getProperty("platform");
 		
-		
-		// data form here  driver.get(AppURL);
-		 Thread.sleep(3000);
+		// on source lab setup
 			AppURL = property.getProperty("App_url");
 			System.out.println("Bname=====" + AppURL);
-		System.out.println("test");
 		browserName = System.getenv("SELENIUM_BROWSER");
 		platform = System.getenv("SELENIUM_PLATFORM");
 		platformVersion = System.getenv("SELENIUM_VERSION");
@@ -61,14 +58,12 @@ public class SetupClass {
 		capability.setCapability("platform", platform);
 		capability.setBrowserName(browserName);
 		capability.setCapability("version", platformVersion);
-		capability.setCapability("name",  "Automation tests");
+		capability.setCapability("name",  "Login test");
 		driver = new RemoteWebDriver(new URL(sauceURL), capability);
-		Thread.sleep(3000);
 		driver.get(AppURL);
 		Thread.sleep(3000);
 		driver.findElement(By.cssSelector(".cookie-message__close[href='#']")).click();
 		Thread.sleep(1000);
-	
 	
 
 	}
