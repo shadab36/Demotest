@@ -63,7 +63,6 @@ public class SetupClass {
 		capability.setBrowserName(browserName);
 		capability.setCapability("version", platformVersion);
 		capability.setCapability("name",  "Automation tests");
-		driver = new RemoteWebDriver(new URL(sauceURL), capability);
 		AppURL = property.getProperty("App_url");
 		System.out.println("Bname=====" + AppURL);
 		Thread.sleep(3000);
@@ -71,6 +70,9 @@ public class SetupClass {
 			Thread.sleep(3000);
 		driver.findElement(By.cssSelector(".cookie-message__close[href='#']")).click();
 		Thread.sleep(3000);
+		driver = new RemoteWebDriver(new URL(sauceURL), capability);
+	
+	
 	
 
 	}
