@@ -1,6 +1,5 @@
 package TestRunner.loginSteps;
 
-import java.util.HashMap;
 import java.util.concurrent.TimeUnit;
 import org.junit.Assert;
 import org.openqa.selenium.By;
@@ -14,13 +13,13 @@ import TestRunner.SetupClass;
 import cucumber.api.java.en.And;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
-import io.appium.java_client.android.AndroidDriver;
 import webApp.PerformAction;
 
 public class Checkout_step extends SetupClass {
 	PerformAction wait = new PerformAction();
 	Actions act = new Actions(driver);
 	JavascriptExecutor js = (JavascriptExecutor) driver;
+
 	@Given("^Hover on primary navigation items\\.$")
 	public void hover_on_primary_navigation() throws InterruptedException {
 
@@ -31,7 +30,7 @@ public class Checkout_step extends SetupClass {
 			Thread.sleep(2000);
 			wait.implictywait(driver);
 			Thread.sleep(1000);
-			
+
 		} else {
 			webelement = driver.findElement(AddingObject.Menu_icon);
 			webelement.click();
@@ -49,31 +48,37 @@ public class Checkout_step extends SetupClass {
 		driver.findElement(AddingObject.Wall_Hooks).click();
 		wait.implictywait(driver);
 		Thread.sleep(1000);
-		
 	}
 
 	@Then("^Filter the item to low price\\.$")
 	public void Filter_from_low() throws InterruptedException {
-		WebElement object1 = driver.findElement(By.id("ID1"));
-		WebElement object2 = driver.findElement(sort_mobile);
-		if (object1.isEnabled()){
-		    object1.click();
-		}else if (object2.isEnabled()){
-		          object2.click();
-		       
-		WebElement sortweb= driver.findElement(By.cssSelector(".sticky-mobile-sort-filter-bar-icon.icon.icon-sliders"));
-		sortweb.click();
-		Thread.sleep(2000);
-		Thread.sleep(2000);
-		driver.findElement(AddingObject.Low_price).click();
-		Thread.sleep(2000);
-		driver.findElement(AddingObject.Refine_product).click();
-		Thread.sleep(2000);
-		  }
-		else {
+		boolean isobject = driver.findElements(AddingObject.SortBy).size()> 0;
+		if (isobject) {
+			((JavascriptExecutor) driver).executeScript("scroll(0,200);");
+			Thread.sleep(2000);
+			WebElement	object = driver.findElement(AddingObject.SortBy);
+			object.click();
+				wait.implictywait(driver);
+				act.sendKeys("Low price").build().perform();
+				wait.implictywait(driver);
+				 act.sendKeys(Keys.ENTER).build().perform();
+				 wait.implictywait(driver);
+			
+			}else {
+				System.out.println("test1245");
+				webelement= driver.findElement(AddingObject.sort_mobile);
+				webelement.click();
+               Thread.sleep(1000);
+				wait.implictywait(driver);
+				driver.findElement(AddingObject.Low_price).click();
+				wait.implictywait(driver);
+				driver.findElement(AddingObject.Refine_product).click();
+				wait.implictywait(driver);
+
 			
 		}
-		}
+	}
+
 	@Then("^Select a item from the product\\.$")
 	public void select_item() throws InterruptedException {
 		webelement = driver.findElement(AddingObject.select_item);
@@ -97,8 +102,9 @@ public class Checkout_step extends SetupClass {
 		webelement = driver.findElement(AddingObject.Check_Bag);
 		js.executeScript("arguments[0].click();", webelement);
 		Thread.sleep(1000);
-		
+
 	}
+
 	@Then("^Select the country from drop down\\.$")
 	public void select_the_country() throws InterruptedException {
 		Select drpCountry = new Select(driver.findElement(AddingObject.select_country));

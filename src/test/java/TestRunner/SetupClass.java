@@ -53,27 +53,27 @@ public class SetupClass {
 		platformVersion = property.getProperty("platform_version");
 		platformName = property.getProperty("platform_name");
 		platform = property.getProperty("platform");
-		 System.setProperty("webdriver.chrome.driver", "F:\\Driver of All\\chromedriver.exe");
-		 driver = new ChromeDriver();
-		 driver.get(AppURL);
-		 Thread.sleep(1000);
-		 driver.manage().window().maximize();
-		 driver.findElement(By.cssSelector(".cookie-message__close[href='#']")).click();
-			Thread.sleep(1000);
-//		DesiredCapabilities cab = new DesiredCapabilities();
-//		cab.setCapability("deviceName", "310012e0a2446300");
-//		cab.setCapability("platformName", "Android");
-//		cab.setCapability("platformVersion", "5.1.1");
-//		cab.setBrowserName("chrome");
-//		// provided appium server id and create object to launch app in ARD
-//		driver = new AndroidDriver(new URL("http://0.0.0.0:4723/wd/hub"), cab);
-//		Thread.sleep(2000);
-//		driver.get(AppURL);
-//		Thread.sleep(2000);
-//		driver.manage().deleteAllCookies();
-//		Thread.sleep(1000);
-//		driver.findElement(By.cssSelector(".cookie-message__close[href='#']")).click();
-//		Thread.sleep(1000);
+//		 System.setProperty("webdriver.chrome.driver", "F:\\Driver of All\\chromedriver.exe");
+//		 driver = new ChromeDriver();
+//		 driver.get(AppURL);
+//		 Thread.sleep(1000);
+//		 driver.manage().window().maximize();
+//		 driver.findElement(By.cssSelector(".cookie-message__close[href='#']")).click();
+//			Thread.sleep(1000);
+		DesiredCapabilities cab = new DesiredCapabilities();
+		cab.setCapability("deviceName", "310012e0a2446300");
+		cab.setCapability("platformName", "Android");
+		cab.setCapability("platformVersion", "5.1.1");
+		cab.setBrowserName("chrome");
+		// provided appium server id and create object to launch app in ARD
+		driver = new AndroidDriver(new URL("http://0.0.0.0:4723/wd/hub"), cab);
+		Thread.sleep(2000);
+		driver.get(AppURL);
+		Thread.sleep(2000);
+		driver.manage().deleteAllCookies();
+		Thread.sleep(1000);
+		driver.findElement(By.cssSelector(".cookie-message__close[href='#']")).click();
+		Thread.sleep(1000);
 		 
 		 
 //		browserName = System.getenv("SELENIUM_BROWSER");

@@ -10,7 +10,7 @@ public class AddingObject {
  // select any product from the home accessories as Wall Hooks
  public static By Wall_Hooks=By.cssSelector(".secondary-nav__link[href='/shop/hooks']");
 
- public static By SortBy=By.cssSelector(".sticky-mobile-sort-filter-bar-icon.icon.icon-sliders");
+ public static By SortBy=By.xpath("(//*[@id=\"products-sorts\"])[1]");
   
 // public static By Additem=By.cssSelector(cssSelector)
  public static By select_item=By.cssSelector("#pager-shop-products>div[data-slug='magnetter-key-letter-holder-white']");
@@ -70,6 +70,6 @@ public class AddingObject {
   public static By Refine_product=By.cssSelector("#close-mobile-filter");
 
   //sort
-  public static By sort_mobile=By.id("products-sorts");
+  public static By sort_mobile=By.cssSelector(".btn.btn-black.btn-full-width>i.sticky-mobile-sort-filter-bar-icon.icon.icon-sliders");
   
 }
