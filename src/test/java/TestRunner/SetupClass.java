@@ -22,7 +22,6 @@ import TestHelper.LoginHelper;
 import io.appium.java_client.android.AndroidDriver;
 import webApp.PerformAction;
 
-
 //import GenericAction.NewuserHelper
 public class SetupClass {
 	public static WebDriver driver;
@@ -37,11 +36,12 @@ public class SetupClass {
 	public static String deviceName;
 	public static String deviceOrientation;
 	public static Logger log;
-	public static DesiredCapabilities capabilities;
+	// public static DesiredCapabilities capabilities;
 	public static ReusableActions commonMethod = new ReusableActions();
 	public static LoginHelper loginHelper = new LoginHelper();
 	public static String Seleniumdriver;
 	public static WebElement webelement;
+
 	@BeforeClass
 	public static void before_Class() throws Exception {
 		PropertyConfigurator.configure("log4j.properties");
@@ -53,57 +53,38 @@ public class SetupClass {
 		platformVersion = property.getProperty("platform_version");
 		platformName = property.getProperty("platform_name");
 		platform = property.getProperty("platform");
-//		 System.setProperty("webdriver.chrome.driver", "F:\\Driver of All\\chromedriver.exe");
-//		 driver = new ChromeDriver();
-//		 driver.get(AppURL);
-//		 Thread.sleep(1000);
-//		 driver.manage().window().maximize();
-//		 driver.findElement(By.cssSelector(".cookie-message__close[href='#']")).click();
-//			Thread.sleep(1000);
-//		DesiredCapabilities cab = new DesiredCapabilities();
-//		cab.setCapability("deviceName", "310012e0a2446300");
-//		cab.setCapability("platformName", "Android");
-//		cab.setCapability("platformVersion", "5.1.1");
-//		cab.setBrowserName("chrome");
-//		// provided appium server id and create object to launch app in ARD
-//		driver = new AndroidDriver(new URL("http://0.0.0.0:4723/wd/hub"), cab);
-//		Thread.sleep(2000);
-//		driver.get(AppURL);
-//		Thread.sleep(2000);
-//		driver.manage().deleteAllCookies();
-//		Thread.sleep(1000);
-//		driver.findElement(By.cssSelector(".cookie-message__close[href='#']")).click();
-//		Thread.sleep(1000);
-//		 
-		 
+
+		
+		// data form here 
 		browserName = System.getenv("SELENIUM_BROWSER");
 		platform = System.getenv("SELENIUM_PLATFORM");
 		platformVersion = System.getenv("SELENIUM_VERSION");
-		Seleniumdriver=System.getenv("SELENIUM_DRIVER");
-		System.out.println("platform :"+ platform);
-		System.out.println("BrowerName: "+  browserName);
-		System.out.println("platform vesion: "+  platformVersion);
-		System.out.println("seleniumDriver: "+ Seleniumdriver);
+		Seleniumdriver = System.getenv("SELENIUM_DRIVER");
+		System.out.println("platform :" + platform);
+		System.out.println("BrowerName: " + browserName);
+		System.out.println("platform vesion: " + platformVersion);
+		System.out.println("seleniumDriver: " + Seleniumdriver);
 		DesiredCapabilities capability = new DesiredCapabilities();
 		capability.setCapability("platform", platform);
 		capability.setBrowserName(browserName);
 		capability.setCapability("version", platformVersion);
-		capability.setCapability("name",  "Automation tests");	
-	driver = new RemoteWebDriver(new URL(sauceURL), capability);
-		
-		
-		
-		
-		
-		
-		
+		capability.setCapability("name", "Automation tests");
+		driver = new RemoteWebDriver(new URL(sauceURL), capability);
+		Thread.sleep(3000);
+		AppURL = property.getProperty("App_url");
+		System.out.println("Bname=====" + AppURL);
+		driver.get(AppURL);
+		Thread.sleep(3000);
+		driver.findElement(By.cssSelector(".cookie-message__close[href='#']")).click();
+		Thread.sleep(3000);
+
 	}
 
 	@AfterClass
 	public static void after_Class() throws InterruptedException {
-		 driver.close();
-		 driver.quit();
-		 Thread.sleep(2000);
+		driver.close();
+		driver.quit();
+		Thread.sleep(2000);
 
 	}
 }

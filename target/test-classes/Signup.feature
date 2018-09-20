@@ -1,7 +1,7 @@
 @signupTest 
-Feature: signup Test On Web Application 
+Feature: signup Test On Web Application     
 Scenario Outline: Data driving for sign-up. 
-	Then click on Login / Register Button. 
+    Then click on Login / Register Button. 
 	Then click on Create an account Button. 
 	Then Enter Full Name as "<Full Name>". 
 	Then Enter Email address as "<Email>". 
@@ -23,7 +23,7 @@ Scenario Outline: Data driving for sign-up.
 		| test123   |   test@gmail.com     | Test12    |                  |                                                                                               |                                        |The password fields must match                                                              | Password must be at least 7 characters long and contain at least one letter and one number              |Sorry, but there are some problems with the form. Please see the fields below for details:    |
 		| test123   |   test@gmail.com     |Test@1234  | Test@4321        |                                                                                               |                                        | The password fields must match                                                             |        Password must be at least 7 characters long and contain at least one letter and one number       |Sorry, but there are some problems with the form. Please see the fields below for details:    | 
 		| Test123   |   test@gmail.com     |Test@1234  | Test@1234        |                                                                                               |                                        |                                                                                            |                                                                                                         | You already have an Amara account, you can login here.                                       |     
-		| Test123   |   testqw12@gmail.com |Test@1234  | Test@1234        |                                                                                               |                                        |                                                                                            |                                                                                                         |  We are delighted to welcome you to Amara, the home of luxury furnishings and gifts.         |                                             
+		| Test123   |  testqwert@gmail.com |Test@1234  | Test@1234        |                                                                                               |                                        |                                                                                            |                                                                                                         |  We are delighted to welcome you to Amara, the home of luxury furnishings and gifts.         |                                             
 		
 				Scenario: 
 					Then  After SignUp user should see Full Name. 

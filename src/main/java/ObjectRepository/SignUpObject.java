@@ -5,7 +5,7 @@ import org.openqa.selenium.By;
 public class SignUpObject {
 
 	// the Element path
-	public static By login_register = By.cssSelector("#user-nav>li:nth-child(2)");
+	public static By login_register = By.cssSelector("#user-nav>li.dropdown.my-account>a");
 	public static By CreateAccount = By.cssSelector("a.btn.btn-black");
 	public static By FullName = By.id("account_creation_contact_name");
 	public static By Telephone = By.id("account_creation_contact_telephone");
