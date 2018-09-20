@@ -9,19 +9,10 @@ import org.apache.log4j.PropertyConfigurator;
 import org.junit.AfterClass;
 import org.junit.BeforeClass;
 import org.openqa.selenium.By;
-import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
-
-import GenericAction.ReusableActions;
-import TestHelper.LoginHelper;
-import io.appium.java_client.android.AndroidDriver;
-import webApp.PerformAction;
-
 //import GenericAction.NewuserHelper
 public class SetupClass {
 	public static WebDriver driver;
@@ -37,8 +28,6 @@ public class SetupClass {
 	public static String deviceOrientation;
 	public static Logger log;
 	// public static DesiredCapabilities capabilities;
-	public static ReusableActions commonMethod = new ReusableActions();
-	public static LoginHelper loginHelper = new LoginHelper();
 	public static String Seleniumdriver;
 	public static WebElement webelement;
 
