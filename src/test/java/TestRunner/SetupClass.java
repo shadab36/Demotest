@@ -60,39 +60,36 @@ public class SetupClass {
 //		 driver.manage().window().maximize();
 //		 driver.findElement(By.cssSelector(".cookie-message__close[href='#']")).click();
 //			Thread.sleep(1000);
-		DesiredCapabilities cab = new DesiredCapabilities();
-		cab.setCapability("deviceName", "310012e0a2446300");
-		cab.setCapability("platformName", "Android");
-		cab.setCapability("platformVersion", "5.1.1");
-		cab.setBrowserName("chrome");
-		// provided appium server id and create object to launch app in ARD
-		driver = new AndroidDriver(new URL("http://0.0.0.0:4723/wd/hub"), cab);
-		Thread.sleep(2000);
-		driver.get(AppURL);
-		Thread.sleep(2000);
-		driver.manage().deleteAllCookies();
-		Thread.sleep(1000);
-		driver.findElement(By.cssSelector(".cookie-message__close[href='#']")).click();
-		Thread.sleep(1000);
+//		DesiredCapabilities cab = new DesiredCapabilities();
+//		cab.setCapability("deviceName", "310012e0a2446300");
+//		cab.setCapability("platformName", "Android");
+//		cab.setCapability("platformVersion", "5.1.1");
+//		cab.setBrowserName("chrome");
+//		// provided appium server id and create object to launch app in ARD
+//		driver = new AndroidDriver(new URL("http://0.0.0.0:4723/wd/hub"), cab);
+//		Thread.sleep(2000);
+//		driver.get(AppURL);
+//		Thread.sleep(2000);
+//		driver.manage().deleteAllCookies();
+//		Thread.sleep(1000);
+//		driver.findElement(By.cssSelector(".cookie-message__close[href='#']")).click();
+//		Thread.sleep(1000);
+//		 
 		 
-		 
-//		browserName = System.getenv("SELENIUM_BROWSER");
-//		platform = System.getenv("SELENIUM_PLATFORM");
-//		platformVersion = System.getenv("SELENIUM_VERSION");
-//		Seleniumdriver=System.getenv("SELENIUM_DRIVER");
-//		System.out.println("platform :"+ platform);
-//		System.out.println("BrowerName: "+  browserName);
-//		System.out.println("platform vesion: "+  platformVersion);
-//		System.out.println("seleniumDriver: "+ Seleniumdriver);
-//		DesiredCapabilities capability = new DesiredCapabilities();
-//		capability.setCapability("platform", platform);
-//		capability.setBrowserName(browserName);
-//		capability.setCapability("version", platformVersion);
-//		capability.setCapability("name",  "Automation tests");
-//		
-////		
-////		
-//	driver = new RemoteWebDriver(new URL(sauceURL), capability);
+		browserName = System.getenv("SELENIUM_BROWSER");
+		platform = System.getenv("SELENIUM_PLATFORM");
+		platformVersion = System.getenv("SELENIUM_VERSION");
+		Seleniumdriver=System.getenv("SELENIUM_DRIVER");
+		System.out.println("platform :"+ platform);
+		System.out.println("BrowerName: "+  browserName);
+		System.out.println("platform vesion: "+  platformVersion);
+		System.out.println("seleniumDriver: "+ Seleniumdriver);
+		DesiredCapabilities capability = new DesiredCapabilities();
+		capability.setCapability("platform", platform);
+		capability.setBrowserName(browserName);
+		capability.setCapability("version", platformVersion);
+		capability.setCapability("name",  "Automation tests");	
+	driver = new RemoteWebDriver(new URL(sauceURL), capability);
 		
 		
 		

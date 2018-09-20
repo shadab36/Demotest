@@ -14,12 +14,10 @@ import cucumber.api.java.en.And;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import webApp.PerformAction;
-
 public class Checkout_step extends SetupClass {
 	PerformAction wait = new PerformAction();
 	Actions act = new Actions(driver);
 	JavascriptExecutor js = (JavascriptExecutor) driver;
-
 	@Given("^Hover on primary navigation items\\.$")
 	public void hover_on_primary_navigation() throws InterruptedException {
 
