@@ -14,4 +14,7 @@ Scenario Outline: Data driving user login
 		|test@gmail.com          |Test@4321     |Sorry, that password does not match our records.          |
 		|test@gmail.com          |Test@1234     |                                                          |             
 		
+		Scenario: Data driving user logout test 
+	Then  Click on user profile name. 
+	Then  Click on logout CTA. 
 		

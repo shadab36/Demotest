@@ -12,7 +12,6 @@ import cucumber.api.java.en.Then;
 import webApp.PerformAction;
 
 public class Login_step extends SetupClass {
-	public static WebElement webelement;
 	PerformAction action = new PerformAction();
 	JavascriptExecutor js = (JavascriptExecutor) driver;
 	Actions act = new Actions(driver);
