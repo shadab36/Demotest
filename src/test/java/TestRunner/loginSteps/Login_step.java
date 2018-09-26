@@ -2,7 +2,6 @@ package TestRunner.loginSteps;
 
 import org.junit.Assert;
 import org.openqa.selenium.JavascriptExecutor;
-import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 
 import ObjectRepository.LoginObject;
@@ -12,10 +11,9 @@ import cucumber.api.java.en.Then;
 import webApp.PerformAction;
 
 public class Login_step extends SetupClass {
-	PerformAction action = new PerformAction();
+	 PerformAction wait = new PerformAction();
 	JavascriptExecutor js = (JavascriptExecutor) driver;
-	Actions act = new Actions(driver);
-
+	 Actions act = new Actions(driver);
 	@Then("^Click on Login Register Button\\.$")
 	public void he_she_click_on_Login__Register_button() {
 		try {
@@ -23,6 +21,7 @@ public class Login_step extends SetupClass {
 			webelement = driver.findElement(SignUpObject.login_register);
 			if (webelement.isEnabled()) {
 				webelement.click();
+				
 			} else {
 				System.out.println("login button is not enable");
 			}
@@ -36,10 +35,10 @@ public class Login_step extends SetupClass {
 
 			webelement = driver.findElement(LoginObject.email);
 			act.click(webelement).build().perform();
-			action.implictywait(driver);
 		webelement.clear();
-			act.sendKeys(str1).build().perform();
-			action.implictywait(driver);
+		wait.implictywait(driver);
+		webelement.sendKeys(str1);
+			wait.implictywait(driver);
 			log.info("It's entering the email Address");
 
 		} catch (Exception e) {
@@ -50,12 +49,13 @@ public class Login_step extends SetupClass {
 	@Then("^Enter your password as \"([^\"]*)\"\\.$")
 	public void Enter_your_password_as(String pwd) throws InterruptedException {
 		webelement = driver.findElement(LoginObject.password);
-		action.implictywait(driver);
+		wait.implictywait(driver);
 		act.click(webelement).build().perform();
+		wait.implictywait(driver);
 		webelement.clear();
-		action.implictywait(driver);
-		act.sendKeys(pwd).build().perform();
-		action.implictywait(driver);
+		wait.implictywait(driver);
+		webelement.sendKeys(pwd);
+		wait.implictywait(driver);
 		log.info("It's entering the user password");
 	}
 
@@ -76,8 +76,10 @@ public class Login_step extends SetupClass {
 		boolean logintext=driver.findElements(LoginObject.Loginval).size()>0;
 		if(logintext) {
 		String Sigin_Val=driver.findElement(LoginObject.Loginval).getText();
-		action.implictywait(driver);
+		System.out.println(Sigin_Val);
+		wait.implictywait(driver);
 		Assert.assertEquals(Sigin_Val, loginVal);
+		System.out.println(loginVal);
 	Thread.sleep(1000);
 	System.out.println(Sigin_Val);
 		}
