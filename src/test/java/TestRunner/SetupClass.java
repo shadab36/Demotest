@@ -54,43 +54,52 @@ public class SetupClass {
 		
 //		 System.setProperty("webdriver.ie.driver", "F:\\Driver of All\\IEDriverServer.exe");
 //		 driver = new InternetExplorerDriver();
+//		
+//				 System.setProperty("webdriver.gecko.driver", "F:\\Driver of All\\geckodriver.exe");
+//				 driver = new FirefoxDriver();
+////		 System.setProperty("webdriver.chrome.driver", "F:\\Driver of All\\chromedriver.exe");
+////		 driver = new ChromeDriver();
+//		 driver.get(AppURL);
+//		 Thread.sleep(3000);
+//		 driver.manage().window().maximize();
+//			try {
+//				WebElement popup = driver.findElement(By.cssSelector(".close[aria-label='Close']"));
+//				if (popup.isEnabled()) {
+//					
+//					JavascriptExecutor jse = (JavascriptExecutor) driver;
+//					jse.executeScript("arguments[0].click();", popup);
+//					 Thread.sleep(1000);
+//				}
+//			} catch (Exception e) {
+//			}
+//		
+//		 driver.findElement(By.cssSelector(".cookie-message__close[href='#']")).click();
+//		 Thread.sleep(1000);
 		
-				 System.setProperty("webdriver.gecko.driver", "F:\\Driver of All\\geckodriver.exe");
-				 driver = new FirefoxDriver();
-//		 System.setProperty("webdriver.chrome.driver", "F:\\Driver of All\\chromedriver.exe");
-//		 driver = new ChromeDriver();
-		 driver.get(AppURL);
-		 Thread.sleep(3000);
-		 driver.manage().window().maximize();
-			try {
-				WebElement popup = driver.findElement(By.cssSelector(".close[aria-label='Close']"));
-				if (popup.isEnabled()) {
-					
-					JavascriptExecutor jse = (JavascriptExecutor) driver;
-					jse.executeScript("arguments[0].click();", popup);
-					 Thread.sleep(1000);
-				}
-			} catch (Exception e) {
-			}
+		DesiredCapabilities cab = new DesiredCapabilities();
+		cab.setCapability("deviceName", "310012e0a2446300");
+		cab.setCapability("platformName", "Android");
+		cab.setCapability("platformVersion", "5.1.1");
+		cab.setBrowserName("chrome");
+		// provided appium server id and create object to launch app in ARD
+		driver= new AndroidDriver(new URL("http://0.0.0.0:4723/wd/hub"), cab);
+		Thread.sleep(2000);
+		driver.get(AppURL);
+		Thread.sleep(2000);
 		
-		 driver.findElement(By.cssSelector(".cookie-message__close[href='#']")).click();
-		 Thread.sleep(1000);
-		
-//		DesiredCapabilities cab = new DesiredCapabilities();
-//		cab.setCapability("deviceName", "310012e0a2446300");
-//		cab.setCapability("platformName", "Android");
-//		cab.setCapability("platformVersion", "5.1.1");
-//		cab.setBrowserName("chrome");
-//		// provided appium server id and create object to launch app in ARD
-//		driver= new AndroidDriver(new URL("http://0.0.0.0:4723/wd/hub"), cab);
-//		Thread.sleep(2000);
-//		driver.get(AppURL);
-//		Thread.sleep(2000);
-//		driver.manage().deleteAllCookies();
-//		Thread.sleep(1000);
-//		driver.findElement(By.cssSelector(".cookie-message__close[href='#']")).click();
-//		Thread.sleep(1000);
-//			
+		try {
+		WebElement popup = driver.findElement(By.cssSelector(".close[aria-label='Close']"));
+		if (popup.isEnabled()) {
+			
+			JavascriptExecutor jse = (JavascriptExecutor) driver;
+			jse.executeScript("arguments[0].click();", popup);
+			 Thread.sleep(1000);
+		}
+	} catch (Exception e) {
+	}
+		driver.findElement(By.cssSelector(".cookie-message__close[href='#']")).click();
+		Thread.sleep(1000);
+			
 			
 			
 			
