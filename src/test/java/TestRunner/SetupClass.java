@@ -79,7 +79,7 @@ public class SetupClass {
 		capability.setCapability("name", "Login test");
 		driver = new RemoteWebDriver(new URL(sauceURL), capability);
 		driver.get(AppURL);
-		Thread.sleep(2000);
+		Thread.sleep(5000);
 		try {
 			WebDriverWait wait = new WebDriverWait(driver, 30);
 
