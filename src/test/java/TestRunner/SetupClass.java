@@ -92,9 +92,8 @@ public class SetupClass {
 			}
 		} catch (Exception e) {
 		}
-
-		WebElement close = driver.findElement(By.cssSelector(".cookie-message__close[href='#']"));
 		WebDriverWait wait = new WebDriverWait(driver, 40);
+		WebElement close = driver.findElement(By.cssSelector(".cookie-message__close[href='#']"));
 		wait.until(ExpectedConditions.elementToBeClickable(close));
 		JavascriptExecutor jst = (JavascriptExecutor) driver;
 		jst.executeScript("arguments[0].click();", close);
