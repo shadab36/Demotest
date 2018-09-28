@@ -34,10 +34,12 @@ public class Login_step extends SetupClass {
 		try {
 
 			webelement = driver.findElement(LoginObject.email);
-			act.click(webelement).build().perform();
+			webelement.click();
+			wait.implictywait(driver);
 		webelement.clear();
 		wait.implictywait(driver);
-		webelement.sendKeys(str1);
+		act.sendKeys(str1).build().perform();
+		//webelement.sendKeys(str1);
 			wait.implictywait(driver);
 			log.info("It's entering the email Address");
 
@@ -50,7 +52,7 @@ public class Login_step extends SetupClass {
 	public void Enter_your_password_as(String pwd) throws InterruptedException {
 		webelement = driver.findElement(LoginObject.password);
 		wait.implictywait(driver);
-		act.click(webelement).build().perform();
+		webelement.click();
 		wait.implictywait(driver);
 		webelement.clear();
 		wait.implictywait(driver);
