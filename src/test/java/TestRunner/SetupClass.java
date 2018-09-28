@@ -24,6 +24,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 import ObjectRepository.SignUpObject;
 import io.appium.java_client.android.AndroidDriver;
+
 //import GenericAction.NewuserHelper
 public class SetupClass {
 	public static WebDriver driver;
@@ -41,10 +42,10 @@ public class SetupClass {
 	public static DesiredCapabilities capabilities;
 	public static String Seleniumdriver;
 	public static WebElement webelement;
- 
+
 	@BeforeClass
 	public static void before_Class() throws Exception {
-	
+
 		PropertyConfigurator.configure("log4j.properties");
 		log = Logger.getLogger("devpinoyLogger");
 		property.load(new FileReader("F:\\ECOM_DemoTest\\DemoTest\\src\\main\\resources\\configure.properties"));
@@ -54,54 +55,54 @@ public class SetupClass {
 		platformVersion = property.getProperty("platform_version");
 		platformName = property.getProperty("platform_name");
 		platform = property.getProperty("platform");
-			
-			
-			// on source lab setup
-			AppURL = property.getProperty("App_url");
-			System.out.println("Bname=====" + AppURL);		
-		
+
+		// on source lab setup
+		AppURL = property.getProperty("App_url");
+		System.out.println("Bname=====" + AppURL);
+		// System.setProperty("webdriver.gecko.driver", "F:\\Driver of
+		// All\\geckodriver.exe");
+		// driver = new FirefoxDriver();
 		browserName = System.getenv("SELENIUM_BROWSER");
 		platform = System.getenv("SELENIUM_PLATFORM");
 		platformVersion = System.getenv("SELENIUM_VERSION");
-		Seleniumdriver=System.getenv("SELENIUM_DRIVER");
-		
-		System.out.println("platform :"+ platform);
-		System.out.println("BrowerName: "+  browserName);
-		System.out.println("platform vesion: "+  platformVersion);
-		System.out.println("seleniumDriver: "+ Seleniumdriver);
-		
+		Seleniumdriver = System.getenv("SELENIUM_DRIVER");
+
+		System.out.println("platform :" + platform);
+		System.out.println("BrowerName: " + browserName);
+		System.out.println("platform vesion: " + platformVersion);
+		System.out.println("seleniumDriver: " + Seleniumdriver);
+
 		DesiredCapabilities capability = new DesiredCapabilities();
 		capability.setCapability("platform", platform);
 		capability.setBrowserName(browserName);
 		capability.setCapability("version", platformVersion);
-		capability.setCapability("name",  "Login test");
+		capability.setCapability("name", "Login test");
 		driver = new RemoteWebDriver(new URL(sauceURL), capability);
 		driver.get(AppURL);
 		Thread.sleep(2000);
 		try {
-			WebDriverWait wait = new WebDriverWait(driver, 20);
-			 
-			 
+			WebDriverWait wait = new WebDriverWait(driver, 30);
+
 			WebElement popup = driver.findElement(By.cssSelector(".close[aria-label='Close']"));
-			WebElement popup_clsoe = wait.until(ExpectedConditions.elementToBeClickable(popup));
+			wait.until(ExpectedConditions.elementToBeClickable(popup));
 			if (popup.isEnabled()) {
 				JavascriptExecutor jse = (JavascriptExecutor) driver;
 				jse.executeScript("arguments[0].click();", popup);
-				 Thread.sleep(3000);
+
 			}
 		} catch (Exception e) {
 		}
-		
-			WebDriverWait wait = new WebDriverWait(driver, 20);
-			WebElement close=	driver.findElement(By.cssSelector(".cookie-message__close[href='#']"));
-			 wait.until(ExpectedConditions.elementToBeClickable(close));
-			JavascriptExecutor jst = (JavascriptExecutor) driver;
-			jst.executeScript("arguments[0].click();", close);
-			 Thread.sleep(1000);
+
+		WebElement close = driver.findElement(By.cssSelector(".cookie-message__close[href='#']"));
+		WebDriverWait wait = new WebDriverWait(driver, 40);
+		wait.until(ExpectedConditions.elementToBeClickable(close));
+		JavascriptExecutor jst = (JavascriptExecutor) driver;
+		jst.executeScript("arguments[0].click();", close);
+		Thread.sleep(1000);
 	}
+
 	@AfterClass
 	public static void after_Class() throws InterruptedException {
-		driver.close();
 		driver.quit();
 		Thread.sleep(2000);
 
