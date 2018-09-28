@@ -1,0 +1,4 @@
+-------------------------------------------------------------------------------
+Test set: |  |  | Sorry, that email does not appear to exist on our system. |
+-------------------------------------------------------------------------------
+Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 5.947 s - in |  |  | Sorry, that email does not appear to exist on our system. |

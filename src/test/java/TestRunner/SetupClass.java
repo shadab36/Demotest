@@ -19,6 +19,8 @@ import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 import ObjectRepository.SignUpObject;
 import io.appium.java_client.android.AndroidDriver;
@@ -42,6 +44,7 @@ public class SetupClass {
  
 	@BeforeClass
 	public static void before_Class() throws Exception {
+	
 		PropertyConfigurator.configure("log4j.properties");
 		log = Logger.getLogger("devpinoyLogger");
 		property.load(new FileReader("F:\\ECOM_DemoTest\\DemoTest\\src\\main\\resources\\configure.properties"));
@@ -51,47 +54,12 @@ public class SetupClass {
 		platformVersion = property.getProperty("platform_version");
 		platformName = property.getProperty("platform_name");
 		platform = property.getProperty("platform");
-		
-//		 System.setProperty("webdriver.ie.driver", "F:\\Driver of All\\IEDriverServer.exe");
-//		 driver = new InternetExplorerDriver();
-//		
-//				 System.setProperty("webdriver.gecko.driver", "F:\\Driver of All\\geckodriver.exe");
-//				 driver = new FirefoxDriver();
-////		 System.setProperty("webdriver.chrome.driver", "F:\\Driver of All\\chromedriver.exe");
-////		 driver = new ChromeDriver();
-//		 driver.get(AppURL);
-//		 Thread.sleep(3000);
-//		 driver.manage().window().maximize();
-//			try {
-//				WebElement popup = driver.findElement(By.cssSelector(".close[aria-label='Close']"));
-//				if (popup.isEnabled()) {
-//					
-//					JavascriptExecutor jse = (JavascriptExecutor) driver;
-//					jse.executeScript("arguments[0].click();", popup);
-//					 Thread.sleep(1000);
-//				}
-//			} catch (Exception e) {
-//			}
-//		
-//		 driver.findElement(By.cssSelector(".cookie-message__close[href='#']")).click();
-//		 Thread.sleep(1000);
-		
-	
-			
-			
-			
-			
-			
-			
-			
-			
-			
 			
 			
 			// on source lab setup
 			AppURL = property.getProperty("App_url");
 			System.out.println("Bname=====" + AppURL);		
-						
+		
 		browserName = System.getenv("SELENIUM_BROWSER");
 		platform = System.getenv("SELENIUM_PLATFORM");
 		platformVersion = System.getenv("SELENIUM_VERSION");
@@ -109,26 +77,33 @@ public class SetupClass {
 		capability.setCapability("name",  "Login test");
 		driver = new RemoteWebDriver(new URL(sauceURL), capability);
 		driver.get(AppURL);
-		Thread.sleep(3000);
+		Thread.sleep(2000);
 		try {
+			WebDriverWait wait = new WebDriverWait(driver, 20);
+			 
+			 
 			WebElement popup = driver.findElement(By.cssSelector(".close[aria-label='Close']"));
+			WebElement popup_clsoe = wait.until(ExpectedConditions.elementToBeClickable(popup));
 			if (popup.isEnabled()) {
-				
 				JavascriptExecutor jse = (JavascriptExecutor) driver;
 				jse.executeScript("arguments[0].click();", popup);
-				 Thread.sleep(1000);
+				 Thread.sleep(3000);
 			}
 		} catch (Exception e) {
-		driver.findElement(By.cssSelector(".cookie-message__close[href='#']")).click();
-		Thread.sleep(1000);
-
-	}
+		}
+		
+			WebDriverWait wait = new WebDriverWait(driver, 20);
+			WebElement close=	driver.findElement(By.cssSelector(".cookie-message__close[href='#']"));
+			 wait.until(ExpectedConditions.elementToBeClickable(close));
+			JavascriptExecutor jst = (JavascriptExecutor) driver;
+			jst.executeScript("arguments[0].click();", close);
+			 Thread.sleep(1000);
 	}
 	@AfterClass
 	public static void after_Class() throws InterruptedException {
-//		driver.close();
-//		driver.quit();
-//		Thread.sleep(2000);
+		driver.close();
+		driver.quit();
+		Thread.sleep(2000);
 
 	}
 }
