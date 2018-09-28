@@ -21,7 +21,7 @@ public class Login_step extends SetupClass {
 			webelement = driver.findElement(SignUpObject.login_register);
 			if (webelement.isEnabled()) {
 				webelement.click();
-				
+				wait.implictywait(driver);
 			} else {
 				System.out.println("login button is not enable");
 			}
@@ -34,12 +34,12 @@ public class Login_step extends SetupClass {
 		try {
 
 			webelement = driver.findElement(LoginObject.email);
+			wait.implictywait(driver);
 			webelement.click();
 			wait.implictywait(driver);
 		webelement.clear();
 		wait.implictywait(driver);
-		act.sendKeys(str1).build().perform();
-		//webelement.sendKeys(str1);
+		webelement.sendKeys(str1);
 			wait.implictywait(driver);
 			log.info("It's entering the email Address");
 
