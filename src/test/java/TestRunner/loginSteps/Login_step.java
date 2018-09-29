@@ -3,7 +3,6 @@ package TestRunner.loginSteps;
 import org.junit.Assert;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.interactions.Actions;
-
 import ObjectRepository.LoginObject;
 import ObjectRepository.SignUpObject;
 import TestRunner.SetupClass;
@@ -19,6 +18,7 @@ public class Login_step extends SetupClass {
 		try {
 
 			webelement = driver.findElement(SignUpObject.login_register);
+			wait.implictywait(driver);
 			if (webelement.isEnabled()) {
 				webelement.click();
 				wait.implictywait(driver);

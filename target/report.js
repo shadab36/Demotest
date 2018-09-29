@@ -160,7 +160,7 @@ formatter.match({
   "location": "Login_step.he_she_click_on_Login__Register_button()"
 });
 formatter.result({
-  "duration": 1844920376,
+  "duration": 4934589749,
   "status": "passed"
 });
 formatter.match({
@@ -173,7 +173,7 @@ formatter.match({
   "location": "Login_step.Enter_your_email_address_as(String)"
 });
 formatter.result({
-  "duration": 380862836,
+  "duration": 531295347,
   "status": "passed"
 });
 formatter.match({
@@ -186,15 +186,15 @@ formatter.match({
   "location": "Login_step.Enter_your_password_as(String)"
 });
 formatter.result({
-  "duration": 459100648,
-  "status": "passed"
+  "duration": 638952284,
+  "error_message": "org.openqa.selenium.WebDriverException: An unknown server-side error occurred while processing the command. Original error: unknown error: Element \u003cinput type\u003d\"password\" id\u003d\"password\" name\u003d\"password\" required\u003d\"required\" aria-describedby\u003d\"afies_password_status\" class\u003d\"form-control\"\u003e is not clickable at point (180, 494). Other element would receive the click: \u003ca title\u003d\"...\" class\u003d\"chat js-zopim\" href\u003d\"#\"\u003eChat with us\u003c/a\u003e\n  (Session info: chrome\u003d69.0.3497.100)\n  (Driver info: chromedriver\u003d2.41.578737 (49da6702b16031c40d63e5618de03a32ff6c197e),platform\u003dWindows NT 10.0.17134 x86_64) (WARNING: The server did not provide any stacktrace information)\nCommand duration or timeout: 455 milliseconds\nBuild info: version: \u00273.4.0\u0027, revision: \u0027unknown\u0027, time: \u0027unknown\u0027\nSystem info: host: \u0027AMW-G1\u0027, ip: \u0027172.23.52.33\u0027, os.name: \u0027Windows 10\u0027, os.arch: \u0027amd64\u0027, os.version: \u002710.0\u0027, java.version: \u00271.8.0_171\u0027\nDriver info: io.appium.java_client.android.AndroidDriver\nCapabilities [{deviceScreenSize\u003d720x1280, networkConnectionEnabled\u003dtrue, warnings\u003d{}, databaseEnabled\u003dfalse, deviceName\u003dZW2223XXGX, platform\u003dLINUX, deviceUDID\u003dZW2223XXGX, desired\u003d{platformVersion\u003d7.1.1, browserName\u003dchrome, platformName\u003dAndroid, deviceName\u003dZW2223XXGX}, platformVersion\u003d7.1.1, webStorageEnabled\u003dfalse, locationContextEnabled\u003dfalse, takesScreenshot\u003dtrue, browserName\u003dchrome, javascriptEnabled\u003dtrue, deviceModel\u003dMoto E (4), platformName\u003dAndroid, deviceManufacturer\u003dmotorola}]\nSession ID: d21e8918-ec9b-4254-a37a-0a5fadf40799\r\n\tat sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)\r\n\tat sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)\r\n\tat sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)\r\n\tat java.lang.reflect.Constructor.newInstance(Unknown Source)\r\n\tat org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:215)\r\n\tat org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:167)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:671)\r\n\tat io.appium.java_client.DefaultGenericMobileDriver.execute(DefaultGenericMobileDriver.java:42)\r\n\tat io.appium.java_client.AppiumDriver.execute(AppiumDriver.java:1)\r\n\tat io.appium.java_client.android.AndroidDriver.execute(AndroidDriver.java:1)\r\n\tat org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:272)\r\n\tat io.appium.java_client.DefaultGenericMobileElement.execute(DefaultGenericMobileElement.java:45)\r\n\tat io.appium.java_client.MobileElement.execute(MobileElement.java:1)\r\n\tat io.appium.java_client.android.AndroidElement.execute(AndroidElement.java:1)\r\n\tat org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:82)\r\n\tat TestRunner.loginSteps.Login_step.Enter_your_password_as(Login_step.java:55)\r\n\tat ✽.Then Enter your password as \"\".(src/test/resources/Login.feature:6)\r\n",
+  "status": "failed"
 });
 formatter.match({
   "location": "Login_step.click_login_cta()"
 });
 formatter.result({
-  "duration": 1131112503,
-  "status": "passed"
+  "status": "skipped"
 });
 formatter.match({
   "arguments": [
@@ -206,8 +206,7 @@ formatter.match({
   "location": "Login_step.verify_message_for_email_pass(String)"
 });
 formatter.result({
-  "duration": 1283190792,
-  "status": "passed"
+  "status": "skipped"
 });
 formatter.scenario({
   "line": 12,
@@ -261,7 +260,7 @@ formatter.match({
   "location": "Login_step.he_she_click_on_Login__Register_button()"
 });
 formatter.result({
-  "duration": 1732650548,
+  "duration": 2993128441,
   "status": "passed"
 });
 formatter.match({
@@ -274,7 +273,7 @@ formatter.match({
   "location": "Login_step.Enter_your_email_address_as(String)"
 });
 formatter.result({
-  "duration": 382972170,
+  "duration": 460301538,
   "status": "passed"
 });
 formatter.match({
@@ -287,15 +286,15 @@ formatter.match({
   "location": "Login_step.Enter_your_password_as(String)"
 });
 formatter.result({
-  "duration": 389125951,
-  "status": "passed"
+  "duration": 560274916,
+  "error_message": "org.openqa.selenium.WebDriverException: An unknown server-side error occurred while processing the command. Original error: unknown error: Element \u003cinput type\u003d\"password\" id\u003d\"password\" name\u003d\"password\" required\u003d\"required\" aria-describedby\u003d\"afies_password_status\" class\u003d\"form-control\"\u003e is not clickable at point (180, 494). Other element would receive the click: \u003ca title\u003d\"...\" class\u003d\"chat js-zopim\" href\u003d\"#\"\u003eChat with us\u003c/a\u003e\n  (Session info: chrome\u003d69.0.3497.100)\n  (Driver info: chromedriver\u003d2.41.578737 (49da6702b16031c40d63e5618de03a32ff6c197e),platform\u003dWindows NT 10.0.17134 x86_64) (WARNING: The server did not provide any stacktrace information)\nCommand duration or timeout: 427 milliseconds\nBuild info: version: \u00273.4.0\u0027, revision: \u0027unknown\u0027, time: \u0027unknown\u0027\nSystem info: host: \u0027AMW-G1\u0027, ip: \u0027172.23.52.33\u0027, os.name: \u0027Windows 10\u0027, os.arch: \u0027amd64\u0027, os.version: \u002710.0\u0027, java.version: \u00271.8.0_171\u0027\nDriver info: io.appium.java_client.android.AndroidDriver\nCapabilities [{deviceScreenSize\u003d720x1280, networkConnectionEnabled\u003dtrue, warnings\u003d{}, databaseEnabled\u003dfalse, deviceName\u003dZW2223XXGX, platform\u003dLINUX, deviceUDID\u003dZW2223XXGX, desired\u003d{platformVersion\u003d7.1.1, browserName\u003dchrome, platformName\u003dAndroid, deviceName\u003dZW2223XXGX}, platformVersion\u003d7.1.1, webStorageEnabled\u003dfalse, locationContextEnabled\u003dfalse, takesScreenshot\u003dtrue, browserName\u003dchrome, javascriptEnabled\u003dtrue, deviceModel\u003dMoto E (4), platformName\u003dAndroid, deviceManufacturer\u003dmotorola}]\nSession ID: d21e8918-ec9b-4254-a37a-0a5fadf40799\r\n\tat sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)\r\n\tat sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)\r\n\tat sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)\r\n\tat java.lang.reflect.Constructor.newInstance(Unknown Source)\r\n\tat org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:215)\r\n\tat org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:167)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:671)\r\n\tat io.appium.java_client.DefaultGenericMobileDriver.execute(DefaultGenericMobileDriver.java:42)\r\n\tat io.appium.java_client.AppiumDriver.execute(AppiumDriver.java:1)\r\n\tat io.appium.java_client.android.AndroidDriver.execute(AndroidDriver.java:1)\r\n\tat org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:272)\r\n\tat io.appium.java_client.DefaultGenericMobileElement.execute(DefaultGenericMobileElement.java:45)\r\n\tat io.appium.java_client.MobileElement.execute(MobileElement.java:1)\r\n\tat io.appium.java_client.android.AndroidElement.execute(AndroidElement.java:1)\r\n\tat org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:82)\r\n\tat TestRunner.loginSteps.Login_step.Enter_your_password_as(Login_step.java:55)\r\n\tat ✽.Then Enter your password as \"\".(src/test/resources/Login.feature:6)\r\n",
+  "status": "failed"
 });
 formatter.match({
   "location": "Login_step.click_login_cta()"
 });
 formatter.result({
-  "duration": 1078305813,
-  "status": "passed"
+  "status": "skipped"
 });
 formatter.match({
   "arguments": [
@@ -307,8 +306,7 @@ formatter.match({
   "location": "Login_step.verify_message_for_email_pass(String)"
 });
 formatter.result({
-  "duration": 1106425825,
-  "status": "passed"
+  "status": "skipped"
 });
 formatter.scenario({
   "line": 13,
@@ -362,7 +360,7 @@ formatter.match({
   "location": "Login_step.he_she_click_on_Login__Register_button()"
 });
 formatter.result({
-  "duration": 1686257194,
+  "duration": 4169335186,
   "status": "passed"
 });
 formatter.match({
@@ -375,7 +373,7 @@ formatter.match({
   "location": "Login_step.Enter_your_email_address_as(String)"
 });
 formatter.result({
-  "duration": 393927286,
+  "duration": 368997052,
   "status": "passed"
 });
 formatter.match({
@@ -388,15 +386,15 @@ formatter.match({
   "location": "Login_step.Enter_your_password_as(String)"
 });
 formatter.result({
-  "duration": 376506390,
-  "status": "passed"
+  "duration": 528064235,
+  "error_message": "org.openqa.selenium.WebDriverException: An unknown server-side error occurred while processing the command. Original error: unknown error: Element \u003cinput type\u003d\"password\" id\u003d\"password\" name\u003d\"password\" required\u003d\"required\" aria-describedby\u003d\"afies_password_status\" class\u003d\"form-control\"\u003e is not clickable at point (180, 494). Other element would receive the click: \u003ca title\u003d\"...\" class\u003d\"chat js-zopim\" href\u003d\"#\"\u003eChat with us\u003c/a\u003e\n  (Session info: chrome\u003d69.0.3497.100)\n  (Driver info: chromedriver\u003d2.41.578737 (49da6702b16031c40d63e5618de03a32ff6c197e),platform\u003dWindows NT 10.0.17134 x86_64) (WARNING: The server did not provide any stacktrace information)\nCommand duration or timeout: 382 milliseconds\nBuild info: version: \u00273.4.0\u0027, revision: \u0027unknown\u0027, time: \u0027unknown\u0027\nSystem info: host: \u0027AMW-G1\u0027, ip: \u0027172.23.52.33\u0027, os.name: \u0027Windows 10\u0027, os.arch: \u0027amd64\u0027, os.version: \u002710.0\u0027, java.version: \u00271.8.0_171\u0027\nDriver info: io.appium.java_client.android.AndroidDriver\nCapabilities [{deviceScreenSize\u003d720x1280, networkConnectionEnabled\u003dtrue, warnings\u003d{}, databaseEnabled\u003dfalse, deviceName\u003dZW2223XXGX, platform\u003dLINUX, deviceUDID\u003dZW2223XXGX, desired\u003d{platformVersion\u003d7.1.1, browserName\u003dchrome, platformName\u003dAndroid, deviceName\u003dZW2223XXGX}, platformVersion\u003d7.1.1, webStorageEnabled\u003dfalse, locationContextEnabled\u003dfalse, takesScreenshot\u003dtrue, browserName\u003dchrome, javascriptEnabled\u003dtrue, deviceModel\u003dMoto E (4), platformName\u003dAndroid, deviceManufacturer\u003dmotorola}]\nSession ID: d21e8918-ec9b-4254-a37a-0a5fadf40799\r\n\tat sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)\r\n\tat sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)\r\n\tat sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)\r\n\tat java.lang.reflect.Constructor.newInstance(Unknown Source)\r\n\tat org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:215)\r\n\tat org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:167)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:671)\r\n\tat io.appium.java_client.DefaultGenericMobileDriver.execute(DefaultGenericMobileDriver.java:42)\r\n\tat io.appium.java_client.AppiumDriver.execute(AppiumDriver.java:1)\r\n\tat io.appium.java_client.android.AndroidDriver.execute(AndroidDriver.java:1)\r\n\tat org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:272)\r\n\tat io.appium.java_client.DefaultGenericMobileElement.execute(DefaultGenericMobileElement.java:45)\r\n\tat io.appium.java_client.MobileElement.execute(MobileElement.java:1)\r\n\tat io.appium.java_client.android.AndroidElement.execute(AndroidElement.java:1)\r\n\tat org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:82)\r\n\tat TestRunner.loginSteps.Login_step.Enter_your_password_as(Login_step.java:55)\r\n\tat ✽.Then Enter your password as \"\".(src/test/resources/Login.feature:6)\r\n",
+  "status": "failed"
 });
 formatter.match({
   "location": "Login_step.click_login_cta()"
 });
 formatter.result({
-  "duration": 1102599157,
-  "status": "passed"
+  "status": "skipped"
 });
 formatter.match({
   "arguments": [
@@ -408,8 +406,7 @@ formatter.match({
   "location": "Login_step.verify_message_for_email_pass(String)"
 });
 formatter.result({
-  "duration": 1260605005,
-  "status": "passed"
+  "status": "skipped"
 });
 formatter.scenario({
   "line": 14,
@@ -463,7 +460,7 @@ formatter.match({
   "location": "Login_step.he_she_click_on_Login__Register_button()"
 });
 formatter.result({
-  "duration": 1629706946,
+  "duration": 2851426156,
   "status": "passed"
 });
 formatter.match({
@@ -476,7 +473,7 @@ formatter.match({
   "location": "Login_step.Enter_your_email_address_as(String)"
 });
 formatter.result({
-  "duration": 388309062,
+  "duration": 400259734,
   "status": "passed"
 });
 formatter.match({
@@ -489,15 +486,15 @@ formatter.match({
   "location": "Login_step.Enter_your_password_as(String)"
 });
 formatter.result({
-  "duration": 378806835,
-  "status": "passed"
+  "duration": 545996242,
+  "error_message": "org.openqa.selenium.WebDriverException: An unknown server-side error occurred while processing the command. Original error: unknown error: Element \u003cinput type\u003d\"password\" id\u003d\"password\" name\u003d\"password\" required\u003d\"required\" aria-describedby\u003d\"afies_password_status\" class\u003d\"form-control\"\u003e is not clickable at point (180, 494). Other element would receive the click: \u003ca title\u003d\"...\" class\u003d\"chat js-zopim\" href\u003d\"#\"\u003eChat with us\u003c/a\u003e\n  (Session info: chrome\u003d69.0.3497.100)\n  (Driver info: chromedriver\u003d2.41.578737 (49da6702b16031c40d63e5618de03a32ff6c197e),platform\u003dWindows NT 10.0.17134 x86_64) (WARNING: The server did not provide any stacktrace information)\nCommand duration or timeout: 340 milliseconds\nBuild info: version: \u00273.4.0\u0027, revision: \u0027unknown\u0027, time: \u0027unknown\u0027\nSystem info: host: \u0027AMW-G1\u0027, ip: \u0027172.23.52.33\u0027, os.name: \u0027Windows 10\u0027, os.arch: \u0027amd64\u0027, os.version: \u002710.0\u0027, java.version: \u00271.8.0_171\u0027\nDriver info: io.appium.java_client.android.AndroidDriver\nCapabilities [{deviceScreenSize\u003d720x1280, networkConnectionEnabled\u003dtrue, warnings\u003d{}, databaseEnabled\u003dfalse, deviceName\u003dZW2223XXGX, platform\u003dLINUX, deviceUDID\u003dZW2223XXGX, desired\u003d{platformVersion\u003d7.1.1, browserName\u003dchrome, platformName\u003dAndroid, deviceName\u003dZW2223XXGX}, platformVersion\u003d7.1.1, webStorageEnabled\u003dfalse, locationContextEnabled\u003dfalse, takesScreenshot\u003dtrue, browserName\u003dchrome, javascriptEnabled\u003dtrue, deviceModel\u003dMoto E (4), platformName\u003dAndroid, deviceManufacturer\u003dmotorola}]\nSession ID: d21e8918-ec9b-4254-a37a-0a5fadf40799\r\n\tat sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)\r\n\tat sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)\r\n\tat sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)\r\n\tat java.lang.reflect.Constructor.newInstance(Unknown Source)\r\n\tat org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:215)\r\n\tat org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:167)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:671)\r\n\tat io.appium.java_client.DefaultGenericMobileDriver.execute(DefaultGenericMobileDriver.java:42)\r\n\tat io.appium.java_client.AppiumDriver.execute(AppiumDriver.java:1)\r\n\tat io.appium.java_client.android.AndroidDriver.execute(AndroidDriver.java:1)\r\n\tat org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:272)\r\n\tat io.appium.java_client.DefaultGenericMobileElement.execute(DefaultGenericMobileElement.java:45)\r\n\tat io.appium.java_client.MobileElement.execute(MobileElement.java:1)\r\n\tat io.appium.java_client.android.AndroidElement.execute(AndroidElement.java:1)\r\n\tat org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:82)\r\n\tat TestRunner.loginSteps.Login_step.Enter_your_password_as(Login_step.java:55)\r\n\tat ✽.Then Enter your password as \"Test@4321\".(src/test/resources/Login.feature:6)\r\n",
+  "status": "failed"
 });
 formatter.match({
   "location": "Login_step.click_login_cta()"
 });
 formatter.result({
-  "duration": 1118110719,
-  "status": "passed"
+  "status": "skipped"
 });
 formatter.match({
   "arguments": [
@@ -509,8 +506,7 @@ formatter.match({
   "location": "Login_step.verify_message_for_email_pass(String)"
 });
 formatter.result({
-  "duration": 1153000957,
-  "status": "passed"
+  "status": "skipped"
 });
 formatter.scenario({
   "line": 15,
@@ -564,7 +560,7 @@ formatter.match({
   "location": "Login_step.he_she_click_on_Login__Register_button()"
 });
 formatter.result({
-  "duration": 1320033032,
+  "duration": 3262341895,
   "status": "passed"
 });
 formatter.match({
@@ -577,7 +573,7 @@ formatter.match({
   "location": "Login_step.Enter_your_email_address_as(String)"
 });
 formatter.result({
-  "duration": 416850852,
+  "duration": 404362847,
   "status": "passed"
 });
 formatter.match({
@@ -590,15 +586,15 @@ formatter.match({
   "location": "Login_step.Enter_your_password_as(String)"
 });
 formatter.result({
-  "duration": 421837077,
-  "status": "passed"
+  "duration": 506866003,
+  "error_message": "org.openqa.selenium.WebDriverException: An unknown server-side error occurred while processing the command. Original error: unknown error: Element \u003cinput type\u003d\"password\" id\u003d\"password\" name\u003d\"password\" required\u003d\"required\" aria-describedby\u003d\"afies_password_status\" class\u003d\"form-control\"\u003e is not clickable at point (180, 494). Other element would receive the click: \u003ca title\u003d\"...\" class\u003d\"chat js-zopim\" href\u003d\"#\"\u003eChat with us\u003c/a\u003e\n  (Session info: chrome\u003d69.0.3497.100)\n  (Driver info: chromedriver\u003d2.41.578737 (49da6702b16031c40d63e5618de03a32ff6c197e),platform\u003dWindows NT 10.0.17134 x86_64) (WARNING: The server did not provide any stacktrace information)\nCommand duration or timeout: 358 milliseconds\nBuild info: version: \u00273.4.0\u0027, revision: \u0027unknown\u0027, time: \u0027unknown\u0027\nSystem info: host: \u0027AMW-G1\u0027, ip: \u0027172.23.52.33\u0027, os.name: \u0027Windows 10\u0027, os.arch: \u0027amd64\u0027, os.version: \u002710.0\u0027, java.version: \u00271.8.0_171\u0027\nDriver info: io.appium.java_client.android.AndroidDriver\nCapabilities [{deviceScreenSize\u003d720x1280, networkConnectionEnabled\u003dtrue, warnings\u003d{}, databaseEnabled\u003dfalse, deviceName\u003dZW2223XXGX, platform\u003dLINUX, deviceUDID\u003dZW2223XXGX, desired\u003d{platformVersion\u003d7.1.1, browserName\u003dchrome, platformName\u003dAndroid, deviceName\u003dZW2223XXGX}, platformVersion\u003d7.1.1, webStorageEnabled\u003dfalse, locationContextEnabled\u003dfalse, takesScreenshot\u003dtrue, browserName\u003dchrome, javascriptEnabled\u003dtrue, deviceModel\u003dMoto E (4), platformName\u003dAndroid, deviceManufacturer\u003dmotorola}]\nSession ID: d21e8918-ec9b-4254-a37a-0a5fadf40799\r\n\tat sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)\r\n\tat sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)\r\n\tat sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)\r\n\tat java.lang.reflect.Constructor.newInstance(Unknown Source)\r\n\tat org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:215)\r\n\tat org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:167)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:671)\r\n\tat io.appium.java_client.DefaultGenericMobileDriver.execute(DefaultGenericMobileDriver.java:42)\r\n\tat io.appium.java_client.AppiumDriver.execute(AppiumDriver.java:1)\r\n\tat io.appium.java_client.android.AndroidDriver.execute(AndroidDriver.java:1)\r\n\tat org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:272)\r\n\tat io.appium.java_client.DefaultGenericMobileElement.execute(DefaultGenericMobileElement.java:45)\r\n\tat io.appium.java_client.MobileElement.execute(MobileElement.java:1)\r\n\tat io.appium.java_client.android.AndroidElement.execute(AndroidElement.java:1)\r\n\tat org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:82)\r\n\tat TestRunner.loginSteps.Login_step.Enter_your_password_as(Login_step.java:55)\r\n\tat ✽.Then Enter your password as \"Test@1234\".(src/test/resources/Login.feature:6)\r\n",
+  "status": "failed"
 });
 formatter.match({
   "location": "Login_step.click_login_cta()"
 });
 formatter.result({
-  "duration": 1088852928,
-  "status": "passed"
+  "status": "skipped"
 });
 formatter.match({
   "arguments": [
@@ -610,8 +606,7 @@ formatter.match({
   "location": "Login_step.verify_message_for_email_pass(String)"
 });
 formatter.result({
-  "duration": 20037638684,
-  "status": "passed"
+  "status": "skipped"
 });
 formatter.scenario({
   "line": 17,
@@ -635,14 +630,15 @@ formatter.match({
   "location": "Logout_step.click_user_profile()"
 });
 formatter.result({
-  "duration": 1275521456,
+  "duration": 3374845944,
   "status": "passed"
 });
 formatter.match({
   "location": "Logout_step.click_on_logout()"
 });
 formatter.result({
-  "duration": 3526438456,
-  "status": "passed"
+  "duration": 17969139986,
+  "error_message": "java.lang.NullPointerException\r\n\tat TestRunner.loginSteps.Logout_step.click_on_logout(Logout_step.java:18)\r\n\tat ✽.Then Click on logout CTA.(src/test/resources/Login.feature:19)\r\n",
+  "status": "failed"
 });
 });
