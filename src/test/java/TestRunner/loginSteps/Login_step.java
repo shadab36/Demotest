@@ -3,6 +3,9 @@ package TestRunner.loginSteps;
 import org.junit.Assert;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+
 import ObjectRepository.LoginObject;
 import ObjectRepository.SignUpObject;
 import TestRunner.SetupClass;
@@ -64,9 +67,12 @@ public class Login_step extends SetupClass {
 	@Then("^Click on Login Now button\\.$")
 	public void click_login_cta() {
 		try {
-		webelement= driver.findElement(LoginObject.login_Button);
+			
+	
+		   WebDriverWait wait = new WebDriverWait(driver,30);
+	wait.until(ExpectedConditions.elementToBeClickable(LoginObject.login_Button));
+	 webelement= driver.findElement(LoginObject.login_Button);
 		 js.executeScript("arguments[0].click();", webelement);
-	Thread.sleep(1000);
 			log.info("click on login CTA");
 			
 		} catch (Exception e) {
