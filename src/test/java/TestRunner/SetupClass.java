@@ -55,7 +55,7 @@ public class SetupClass {
 		platformVersion = property.getProperty("platform_version");
 		platformName = property.getProperty("platform_name");
 		platform = property.getProperty("platform");
-
+       driver.manage().window().maximize();
 		// on source lab setup
 		AppURL = property.getProperty("App_url");
 		System.out.println("Bname=====" + AppURL);

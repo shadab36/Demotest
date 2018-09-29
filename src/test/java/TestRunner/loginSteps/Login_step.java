@@ -78,7 +78,6 @@ public class Login_step extends SetupClass {
 		} catch (Exception e) {
 		}
 	}
-
 	@Then("^Verify \"([^\"]*)\" message for email address and password\\.$")
 	public void verify_message_for_email_pass(String loginVal) throws InterruptedException {
 		boolean logintext=driver.findElements(LoginObject.Loginval).size()>0;
