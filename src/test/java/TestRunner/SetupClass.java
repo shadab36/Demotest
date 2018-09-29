@@ -59,9 +59,7 @@ public class SetupClass {
 		// on source lab setup
 		AppURL = property.getProperty("App_url");
 		System.out.println("Bname=====" + AppURL);
-		// System.setProperty("webdriver.gecko.driver", "F:\\Driver of
-		// All\\geckodriver.exe");
-		// driver = new FirefoxDriver();
+		
 		browserName = System.getenv("SELENIUM_BROWSER");
 		platform = System.getenv("SELENIUM_PLATFORM");
 		platformVersion = System.getenv("SELENIUM_VERSION");
