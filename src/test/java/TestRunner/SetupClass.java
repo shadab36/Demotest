@@ -16,6 +16,8 @@ import org.openqa.selenium.remote.RemoteWebDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+import io.appium.java_client.android.AndroidDriver;
+
 //import GenericAction.NewuserHelper
 public class SetupClass {
 	public static WebDriver driver;
@@ -50,22 +52,29 @@ public class SetupClass {
 		// on source lab setup
 		AppURL = property.getProperty("App_url");
 		System.out.println("Bname=====" + AppURL);
+		DesiredCapabilities cab = new DesiredCapabilities();
+		cab.setCapability("deviceName", "ZW2223XXGX");
+		cab.setCapability("platformName", "Android");
+		cab.setCapability("platformVersion", "7.1.1");
+		cab.setBrowserName("chrome");
+		driver = new AndroidDriver(new URL("http://0.0.0.0:4723/wd/hub"), cab);
+		Thread.sleep(2000);
 		
-		browserName = System.getenv("SELENIUM_BROWSER");
-		platform = System.getenv("SELENIUM_PLATFORM");
-		platformVersion = System.getenv("SELENIUM_VERSION");
-		Seleniumdriver=System.getenv("SELENIUM_DRIVER");
-		System.out.println("platform :"+ platform);
-		System.out.println("BrowerName: "+  browserName);
-		System.out.println("platform vesion: "+  platformVersion);
-		System.out.println("seleniumDriver: "+ Seleniumdriver);
-		DesiredCapabilities capability = new DesiredCapabilities();
-		capability.setCapability("platform", platform);
-		capability.setBrowserName(browserName);
-		capability.setCapability("version", platformVersion);
-		capability.setCapability("name",  "Login test");	
-	    driver = new RemoteWebDriver(new URL(sauceURL), capability);
-		Thread.sleep(1000);
+//		browserName = System.getenv("SELENIUM_BROWSER");
+//		platform = System.getenv("SELENIUM_PLATFORM");
+//		platformVersion = System.getenv("SELENIUM_VERSION");
+//		Seleniumdriver=System.getenv("SELENIUM_DRIVER");
+//		System.out.println("platform :"+ platform);
+//		System.out.println("BrowerName: "+  browserName);
+//		System.out.println("platform vesion: "+  platformVersion);
+//		System.out.println("seleniumDriver: "+ Seleniumdriver);
+//		DesiredCapabilities capability = new DesiredCapabilities();
+//		capability.setCapability("platform", platform);
+//		capability.setBrowserName(browserName);
+//		capability.setCapability("version", platformVersion);
+//		capability.setCapability("name",  "Login test");	
+//	    driver = new RemoteWebDriver(new URL(sauceURL), capability);
+//		Thread.sleep(1000);
 		driver.get(AppURL);
 		Thread.sleep(3000);
 		try {

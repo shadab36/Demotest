@@ -2,6 +2,7 @@ package TestRunner.loginSteps;
 
 import org.junit.Assert;
 import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -36,13 +37,13 @@ public class Login_step extends SetupClass {
 	public void Enter_your_email_address_as(String str1) {
 		try {
 
-			webelement = driver.findElement(LoginObject.email);
+		webelement = driver.findElement(LoginObject.email);
 			wait.implictywait(driver);
-			webelement.click();
+			js.executeScript("arguments[0].click();", webelement);
 			wait.implictywait(driver);
-		webelement.clear();
+			webelement .clear();
 		wait.implictywait(driver);
-		webelement.sendKeys(str1);
+		webelement .sendKeys(str1);
 			wait.implictywait(driver);
 			log.info("It's entering the email Address");
 
@@ -55,7 +56,7 @@ public class Login_step extends SetupClass {
 	public void Enter_your_password_as(String pwd) throws InterruptedException {
 		webelement = driver.findElement(LoginObject.password);
 		wait.implictywait(driver);
-		webelement.click();
+		js.executeScript("arguments[0].click();", webelement);
 		wait.implictywait(driver);
 		webelement.clear();
 		wait.implictywait(driver);
