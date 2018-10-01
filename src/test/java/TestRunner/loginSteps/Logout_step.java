@@ -15,8 +15,8 @@ public class Logout_step extends SetupClass {
 
 	@Then("^Click on logout CTA\\.$")
 	public void click_on_logout() throws InterruptedException {
-		driver.findElement(LogoutObject.logout).click();
+	webelement=	driver.findElement(LogoutObject.logout);
 		Thread.sleep(1000);
-
+		webelement.click();
 	}
 }
