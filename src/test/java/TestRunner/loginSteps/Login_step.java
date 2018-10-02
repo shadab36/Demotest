@@ -72,7 +72,7 @@ public class Login_step extends SetupClass {
 		wait.until(ExpectedConditions.elementToBeClickable(LoginObject.login_Button));
 		 webelement= driver.findElement(LoginObject.login_Button);
 			 js.executeScript("arguments[0].click();", webelement);
-			  Thread.sleep(1000);
+			  Thread.sleep(1500);
 				log.info("click on login CTA");
 				
 		} catch (Exception e) {
@@ -88,7 +88,7 @@ public class Login_step extends SetupClass {
 			System.out.println(Sigin_Val);
 			wait.implictywait(driver);
 			Assert.assertEquals(Sigin_Val, loginVal);
-			Thread.sleep(500);
+			Thread.sleep(1000);
 		
 		}
 		}
