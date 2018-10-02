@@ -1,7 +1,8 @@
 @LoginTest 
 Feature: Login Test On Web Application 
-Scenario Outline: Data driving user login 
+Scenario: Data driving user login link. 
 	Then Click on Login Register Button. 
+Scenario Outline: Data driving user login 
 	Then Enter Your email address as "<email address>". 
 	Then Enter your password as "<password>". 
 	Then Click on Login Now button. 
@@ -14,7 +15,7 @@ Scenario Outline: Data driving user login
 		|test@gmail.com          |Test@4321     |Sorry, that password does not match our records.          |
 		|test@gmail.com          |Test@1234     |                                                          |             
 		
-		Scenario: Data driving user logout test 
+Scenario: Data driving user logout test 
 	Then  Click on user profile name. 
 	Then  Click on logout CTA. 
 		

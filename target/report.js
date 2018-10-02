@@ -12,8 +12,28 @@ formatter.feature({
     }
   ]
 });
-formatter.scenarioOutline({
+formatter.scenario({
   "line": 3,
+  "name": "Data driving user login link.",
+  "description": "",
+  "id": "login-test-on-web-application;data-driving-user-login-link.",
+  "type": "scenario",
+  "keyword": "Scenario"
+});
+formatter.step({
+  "line": 4,
+  "name": "Click on Login Register Button.",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "Login_step.he_she_click_on_Login__Register_button()"
+});
+formatter.result({
+  "duration": 1778161777,
+  "status": "passed"
+});
+formatter.scenarioOutline({
+  "line": 5,
   "name": "Data driving user login",
   "description": "",
   "id": "login-test-on-web-application;data-driving-user-login",
@@ -21,32 +41,27 @@ formatter.scenarioOutline({
   "keyword": "Scenario Outline"
 });
 formatter.step({
-  "line": 4,
-  "name": "Click on Login Register Button.",
-  "keyword": "Then "
-});
-formatter.step({
-  "line": 5,
+  "line": 6,
   "name": "Enter Your email address as \"\u003cemail address\u003e\".",
   "keyword": "Then "
 });
 formatter.step({
-  "line": 6,
+  "line": 7,
   "name": "Enter your password as \"\u003cpassword\u003e\".",
   "keyword": "Then "
 });
 formatter.step({
-  "line": 7,
+  "line": 8,
   "name": "Click on Login Now button.",
   "keyword": "Then "
 });
 formatter.step({
-  "line": 8,
+  "line": 9,
   "name": "Verify \"\u003cLoginVal\u003e\" message for email address and password.",
   "keyword": "Then "
 });
 formatter.examples({
-  "line": 9,
+  "line": 10,
   "name": "",
   "description": "",
   "id": "login-test-on-web-application;data-driving-user-login;",
@@ -57,7 +72,7 @@ formatter.examples({
         "password",
         "LoginVal"
       ],
-      "line": 10,
+      "line": 11,
       "id": "login-test-on-web-application;data-driving-user-login;;1"
     },
     {
@@ -66,7 +81,7 @@ formatter.examples({
         "",
         "Sorry, that email does not appear to exist on our system."
       ],
-      "line": 11,
+      "line": 12,
       "id": "login-test-on-web-application;data-driving-user-login;;2"
     },
     {
@@ -75,7 +90,7 @@ formatter.examples({
         "",
         "Sorry, that email does not appear to exist on our system."
       ],
-      "line": 12,
+      "line": 13,
       "id": "login-test-on-web-application;data-driving-user-login;;3"
     },
     {
@@ -84,7 +99,7 @@ formatter.examples({
         "",
         "Sorry, that password does not match our records."
       ],
-      "line": 13,
+      "line": 14,
       "id": "login-test-on-web-application;data-driving-user-login;;4"
     },
     {
@@ -93,7 +108,7 @@ formatter.examples({
         "Test@4321",
         "Sorry, that password does not match our records."
       ],
-      "line": 14,
+      "line": 15,
       "id": "login-test-on-web-application;data-driving-user-login;;5"
     },
     {
@@ -102,14 +117,14 @@ formatter.examples({
         "Test@1234",
         ""
       ],
-      "line": 15,
+      "line": 16,
       "id": "login-test-on-web-application;data-driving-user-login;;6"
     }
   ],
   "keyword": "Examples"
 });
 formatter.scenario({
-  "line": 11,
+  "line": 12,
   "name": "Data driving user login",
   "description": "",
   "id": "login-test-on-web-application;data-driving-user-login;;2",
@@ -123,12 +138,7 @@ formatter.scenario({
   ]
 });
 formatter.step({
-  "line": 4,
-  "name": "Click on Login Register Button.",
-  "keyword": "Then "
-});
-formatter.step({
-  "line": 5,
+  "line": 6,
   "name": "Enter Your email address as \"\".",
   "matchedColumns": [
     0
@@ -136,7 +146,7 @@ formatter.step({
   "keyword": "Then "
 });
 formatter.step({
-  "line": 6,
+  "line": 7,
   "name": "Enter your password as \"\".",
   "matchedColumns": [
     1
@@ -144,24 +154,17 @@ formatter.step({
   "keyword": "Then "
 });
 formatter.step({
-  "line": 7,
+  "line": 8,
   "name": "Click on Login Now button.",
   "keyword": "Then "
 });
 formatter.step({
-  "line": 8,
+  "line": 9,
   "name": "Verify \"Sorry, that email does not appear to exist on our system.\" message for email address and password.",
   "matchedColumns": [
     2
   ],
   "keyword": "Then "
-});
-formatter.match({
-  "location": "Login_step.he_she_click_on_Login__Register_button()"
-});
-formatter.result({
-  "duration": 4468677333,
-  "status": "passed"
 });
 formatter.match({
   "arguments": [
@@ -173,7 +176,7 @@ formatter.match({
   "location": "Login_step.Enter_your_email_address_as(String)"
 });
 formatter.result({
-  "duration": 3953539555,
+  "duration": 379989778,
   "status": "passed"
 });
 formatter.match({
@@ -186,14 +189,14 @@ formatter.match({
   "location": "Login_step.Enter_your_password_as(String)"
 });
 formatter.result({
-  "duration": 3711870667,
+  "duration": 437773777,
   "status": "passed"
 });
 formatter.match({
   "location": "Login_step.click_login_cta()"
 });
 formatter.result({
-  "duration": 4127500889,
+  "duration": 1827599555,
   "status": "passed"
 });
 formatter.match({
@@ -206,11 +209,11 @@ formatter.match({
   "location": "Login_step.verify_message_for_email_pass(String)"
 });
 formatter.result({
-  "duration": 3019119112,
+  "duration": 1359047556,
   "status": "passed"
 });
 formatter.scenario({
-  "line": 12,
+  "line": 13,
   "name": "Data driving user login",
   "description": "",
   "id": "login-test-on-web-application;data-driving-user-login;;3",
@@ -224,12 +227,7 @@ formatter.scenario({
   ]
 });
 formatter.step({
-  "line": 4,
-  "name": "Click on Login Register Button.",
-  "keyword": "Then "
-});
-formatter.step({
-  "line": 5,
+  "line": 6,
   "name": "Enter Your email address as \"test@@gmail.com\".",
   "matchedColumns": [
     0
@@ -237,7 +235,7 @@ formatter.step({
   "keyword": "Then "
 });
 formatter.step({
-  "line": 6,
+  "line": 7,
   "name": "Enter your password as \"\".",
   "matchedColumns": [
     1
@@ -245,24 +243,17 @@ formatter.step({
   "keyword": "Then "
 });
 formatter.step({
-  "line": 7,
+  "line": 8,
   "name": "Click on Login Now button.",
   "keyword": "Then "
 });
 formatter.step({
-  "line": 8,
+  "line": 9,
   "name": "Verify \"Sorry, that email does not appear to exist on our system.\" message for email address and password.",
   "matchedColumns": [
     2
   ],
   "keyword": "Then "
-});
-formatter.match({
-  "location": "Login_step.he_she_click_on_Login__Register_button()"
-});
-formatter.result({
-  "duration": 3593803111,
-  "status": "passed"
 });
 formatter.match({
   "arguments": [
@@ -274,7 +265,7 @@ formatter.match({
   "location": "Login_step.Enter_your_email_address_as(String)"
 });
 formatter.result({
-  "duration": 4432926222,
+  "duration": 492398222,
   "status": "passed"
 });
 formatter.match({
@@ -287,14 +278,14 @@ formatter.match({
   "location": "Login_step.Enter_your_password_as(String)"
 });
 formatter.result({
-  "duration": 3605626222,
+  "duration": 468561778,
   "status": "passed"
 });
 formatter.match({
   "location": "Login_step.click_login_cta()"
 });
 formatter.result({
-  "duration": 3840755111,
+  "duration": 1556033777,
   "status": "passed"
 });
 formatter.match({
@@ -307,11 +298,11 @@ formatter.match({
   "location": "Login_step.verify_message_for_email_pass(String)"
 });
 formatter.result({
-  "duration": 2961440889,
+  "duration": 1147664889,
   "status": "passed"
 });
 formatter.scenario({
-  "line": 13,
+  "line": 14,
   "name": "Data driving user login",
   "description": "",
   "id": "login-test-on-web-application;data-driving-user-login;;4",
@@ -325,12 +316,7 @@ formatter.scenario({
   ]
 });
 formatter.step({
-  "line": 4,
-  "name": "Click on Login Register Button.",
-  "keyword": "Then "
-});
-formatter.step({
-  "line": 5,
+  "line": 6,
   "name": "Enter Your email address as \"test@gmail.com\".",
   "matchedColumns": [
     0
@@ -338,7 +324,7 @@ formatter.step({
   "keyword": "Then "
 });
 formatter.step({
-  "line": 6,
+  "line": 7,
   "name": "Enter your password as \"\".",
   "matchedColumns": [
     1
@@ -346,24 +332,17 @@ formatter.step({
   "keyword": "Then "
 });
 formatter.step({
-  "line": 7,
+  "line": 8,
   "name": "Click on Login Now button.",
   "keyword": "Then "
 });
 formatter.step({
-  "line": 8,
+  "line": 9,
   "name": "Verify \"Sorry, that password does not match our records.\" message for email address and password.",
   "matchedColumns": [
     2
   ],
   "keyword": "Then "
-});
-formatter.match({
-  "location": "Login_step.he_she_click_on_Login__Register_button()"
-});
-formatter.result({
-  "duration": 3907726222,
-  "status": "passed"
 });
 formatter.match({
   "arguments": [
@@ -375,7 +354,7 @@ formatter.match({
   "location": "Login_step.Enter_your_email_address_as(String)"
 });
 formatter.result({
-  "duration": 4845338222,
+  "duration": 385008000,
   "status": "passed"
 });
 formatter.match({
@@ -388,14 +367,14 @@ formatter.match({
   "location": "Login_step.Enter_your_password_as(String)"
 });
 formatter.result({
-  "duration": 4929267555,
+  "duration": 269560444,
   "status": "passed"
 });
 formatter.match({
   "location": "Login_step.click_login_cta()"
 });
 formatter.result({
-  "duration": 5738791112,
+  "duration": 1150088445,
   "status": "passed"
 });
 formatter.match({
@@ -408,11 +387,11 @@ formatter.match({
   "location": "Login_step.verify_message_for_email_pass(String)"
 });
 formatter.result({
-  "duration": 4165169333,
+  "duration": 1103846223,
   "status": "passed"
 });
 formatter.scenario({
-  "line": 14,
+  "line": 15,
   "name": "Data driving user login",
   "description": "",
   "id": "login-test-on-web-application;data-driving-user-login;;5",
@@ -426,12 +405,7 @@ formatter.scenario({
   ]
 });
 formatter.step({
-  "line": 4,
-  "name": "Click on Login Register Button.",
-  "keyword": "Then "
-});
-formatter.step({
-  "line": 5,
+  "line": 6,
   "name": "Enter Your email address as \"test@gmail.com\".",
   "matchedColumns": [
     0
@@ -439,7 +413,7 @@ formatter.step({
   "keyword": "Then "
 });
 formatter.step({
-  "line": 6,
+  "line": 7,
   "name": "Enter your password as \"Test@4321\".",
   "matchedColumns": [
     1
@@ -447,24 +421,17 @@ formatter.step({
   "keyword": "Then "
 });
 formatter.step({
-  "line": 7,
+  "line": 8,
   "name": "Click on Login Now button.",
   "keyword": "Then "
 });
 formatter.step({
-  "line": 8,
+  "line": 9,
   "name": "Verify \"Sorry, that password does not match our records.\" message for email address and password.",
   "matchedColumns": [
     2
   ],
   "keyword": "Then "
-});
-formatter.match({
-  "location": "Login_step.he_she_click_on_Login__Register_button()"
-});
-formatter.result({
-  "duration": 6367334222,
-  "status": "passed"
 });
 formatter.match({
   "arguments": [
@@ -476,7 +443,7 @@ formatter.match({
   "location": "Login_step.Enter_your_email_address_as(String)"
 });
 formatter.result({
-  "duration": 5216657334,
+  "duration": 367963556,
   "status": "passed"
 });
 formatter.match({
@@ -489,14 +456,14 @@ formatter.match({
   "location": "Login_step.Enter_your_password_as(String)"
 });
 formatter.result({
-  "duration": 4275874666,
+  "duration": 290060445,
   "status": "passed"
 });
 formatter.match({
   "location": "Login_step.click_login_cta()"
 });
 formatter.result({
-  "duration": 5138101334,
+  "duration": 1740467111,
   "status": "passed"
 });
 formatter.match({
@@ -509,11 +476,11 @@ formatter.match({
   "location": "Login_step.verify_message_for_email_pass(String)"
 });
 formatter.result({
-  "duration": 3066903555,
+  "duration": 1153408000,
   "status": "passed"
 });
 formatter.scenario({
-  "line": 15,
+  "line": 16,
   "name": "Data driving user login",
   "description": "",
   "id": "login-test-on-web-application;data-driving-user-login;;6",
@@ -527,12 +494,7 @@ formatter.scenario({
   ]
 });
 formatter.step({
-  "line": 4,
-  "name": "Click on Login Register Button.",
-  "keyword": "Then "
-});
-formatter.step({
-  "line": 5,
+  "line": 6,
   "name": "Enter Your email address as \"test@gmail.com\".",
   "matchedColumns": [
     0
@@ -540,7 +502,7 @@ formatter.step({
   "keyword": "Then "
 });
 formatter.step({
-  "line": 6,
+  "line": 7,
   "name": "Enter your password as \"Test@1234\".",
   "matchedColumns": [
     1
@@ -548,24 +510,17 @@ formatter.step({
   "keyword": "Then "
 });
 formatter.step({
-  "line": 7,
+  "line": 8,
   "name": "Click on Login Now button.",
   "keyword": "Then "
 });
 formatter.step({
-  "line": 8,
+  "line": 9,
   "name": "Verify \"\" message for email address and password.",
   "matchedColumns": [
     2
   ],
   "keyword": "Then "
-});
-formatter.match({
-  "location": "Login_step.he_she_click_on_Login__Register_button()"
-});
-formatter.result({
-  "duration": 4048509777,
-  "status": "passed"
 });
 formatter.match({
   "arguments": [
@@ -577,7 +532,7 @@ formatter.match({
   "location": "Login_step.Enter_your_email_address_as(String)"
 });
 formatter.result({
-  "duration": 4803035556,
+  "duration": 410569333,
   "status": "passed"
 });
 formatter.match({
@@ -590,14 +545,14 @@ formatter.match({
   "location": "Login_step.Enter_your_password_as(String)"
 });
 formatter.result({
-  "duration": 4337431111,
+  "duration": 359864889,
   "status": "passed"
 });
 formatter.match({
   "location": "Login_step.click_login_cta()"
 });
 formatter.result({
-  "duration": 5397934666,
+  "duration": 1857976888,
   "status": "passed"
 });
 formatter.match({
@@ -610,11 +565,11 @@ formatter.match({
   "location": "Login_step.verify_message_for_email_pass(String)"
 });
 formatter.result({
-  "duration": 20572210667,
+  "duration": 20082668444,
   "status": "passed"
 });
 formatter.scenario({
-  "line": 17,
+  "line": 18,
   "name": "Data driving user logout test",
   "description": "",
   "id": "login-test-on-web-application;data-driving-user-logout-test",
@@ -622,12 +577,12 @@ formatter.scenario({
   "keyword": "Scenario"
 });
 formatter.step({
-  "line": 18,
+  "line": 19,
   "name": "Click on user profile name.",
   "keyword": "Then "
 });
 formatter.step({
-  "line": 19,
+  "line": 20,
   "name": "Click on logout CTA.",
   "keyword": "Then "
 });
@@ -635,14 +590,14 @@ formatter.match({
   "location": "Logout_step.click_user_profile()"
 });
 formatter.result({
-  "duration": 2574716445,
+  "duration": 1173909778,
   "status": "passed"
 });
 formatter.match({
   "location": "Logout_step.click_on_logout()"
 });
 formatter.result({
-  "duration": 6606828000,
+  "duration": 3859316444,
   "status": "passed"
 });
 });
