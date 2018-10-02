@@ -12,10 +12,14 @@ import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+
+import io.appium.java_client.android.AndroidDriver;
 
 public class SetupClass {
 	public static WebDriver driver;
@@ -50,7 +54,7 @@ public class SetupClass {
 		// on source lab setup
 		AppURL = property.getProperty("App_url");
 		System.out.println("Bname=====" + AppURL);
-	
+
 		browserName = System.getenv("SELENIUM_BROWSER");
 		platform = System.getenv("SELENIUM_PLATFORM");
 		platformVersion = System.getenv("SELENIUM_VERSION");
@@ -67,20 +71,21 @@ public class SetupClass {
 		driver = new RemoteWebDriver(new URL(sauceURL), capability);
 		Thread.sleep(1000);
 		driver.get(AppURL);
-		Thread.sleep(3000);
+		Thread.sleep(2000);
 		try {
-			WebDriverWait wait = new WebDriverWait(driver, 30);
-
+			driver.manage().window().maximize();
 			WebElement popup = driver.findElement(By.cssSelector(".close[aria-label='Close']"));
-			wait.until(ExpectedConditions.elementToBeClickable(popup));
 			if (popup.isEnabled()) {
+				WebDriverWait wait = new WebDriverWait(driver, 30);
+				wait.until(ExpectedConditions.elementToBeClickable(popup));
 				JavascriptExecutor jse = (JavascriptExecutor) driver;
 				jse.executeScript("arguments[0].click();", popup);
+				Thread.sleep(1000);
 
 			}
 		} catch (Exception e) {
 		}
-		WebDriverWait wait = new WebDriverWait(driver, 40);
+		WebDriverWait wait = new WebDriverWait(driver, 20);
 		WebElement close = driver.findElement(By.cssSelector(".cookie-message__close[href='#']"));
 		wait.until(ExpectedConditions.elementToBeClickable(close));
 		JavascriptExecutor jst = (JavascriptExecutor) driver;
@@ -89,9 +94,10 @@ public class SetupClass {
 	}
 
 	@AfterClass
+
 	public static void after_Class() throws InterruptedException {
+
 		driver.quit();
 		Thread.sleep(2000);
-
 	}
 }

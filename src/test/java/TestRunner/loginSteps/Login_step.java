@@ -26,7 +26,7 @@ public class Login_step extends SetupClass {
 				webelement.click();
 				wait.implictywait(driver);
 			} else {
-				System.out.println("login button is not enable");
+				
 			}
 		} catch (Exception e) {
 		}
@@ -68,12 +68,13 @@ public class Login_step extends SetupClass {
 	public void click_login_cta() {
 		try {
 
-			WebDriverWait wait = new WebDriverWait(driver, 30);
-			wait.until(ExpectedConditions.elementToBeClickable(LoginObject.login_Button));
-			webelement = driver.findElement(LoginObject.login_Button);
-			js.executeScript("arguments[0].click();", webelement);
-			log.info("click on login CTA");
-
+			   WebDriverWait wait = new WebDriverWait(driver,30);
+		wait.until(ExpectedConditions.elementToBeClickable(LoginObject.login_Button));
+		 webelement= driver.findElement(LoginObject.login_Button);
+			 js.executeScript("arguments[0].click();", webelement);
+			  Thread.sleep(1000);
+				log.info("click on login CTA");
+				
 		} catch (Exception e) {
 		}
 	}
@@ -87,9 +88,8 @@ public class Login_step extends SetupClass {
 			System.out.println(Sigin_Val);
 			wait.implictywait(driver);
 			Assert.assertEquals(Sigin_Val, loginVal);
-			System.out.println(loginVal);
-			Thread.sleep(1000);
-			System.out.println(Sigin_Val);
+			Thread.sleep(500);
+		
 		}
 		}
 		catch(Exception e) {
