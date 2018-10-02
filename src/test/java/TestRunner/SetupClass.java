@@ -53,6 +53,8 @@ public class SetupClass {
 		AppURL = property.getProperty("App_url");
 		System.out.println("Bname=====" + AppURL);
 		
+		
+	
 		browserName = System.getenv("SELENIUM_BROWSER");
 		platform = System.getenv("SELENIUM_PLATFORM");
 		platformVersion = System.getenv("SELENIUM_VERSION");
@@ -66,7 +68,40 @@ public class SetupClass {
 		capability.setBrowserName(browserName);
 		capability.setCapability("version", platformVersion);
 		capability.setCapability("name",  "Login test");	
-	    driver = new RemoteWebDriver(new URL(sauceURL), capability);
+	    driver = new RemoteWebDriver(new URL(sauceURL), capability);  
+	   
+			
+			
+			
+			
+//		    caps.setCapability("browserName", "Android");
+//		    caps.setCapability("device", "Samsung Galaxy S9");
+//		    caps.setCapability("realMobile", "true");
+//		    caps.setCapability("os_version", "8.0");
+//		    driver = new RemoteWebDriver(new URL(sauceURL), caps);
+		
+		
+		
+		
+		
+		
+		
+		
+		
+//		browserName = System.getenv("SELENIUM_BROWSER");
+//		platform = System.getenv("SELENIUM_PLATFORM");
+//		platformVersion = System.getenv("SELENIUM_VERSION");
+//		Seleniumdriver=System.getenv("SELENIUM_DRIVER");
+//		System.out.println("platform :"+ platform);
+//		System.out.println("BrowerName: "+  browserName);
+//		System.out.println("platform vesion: "+  platformVersion);
+//		System.out.println("seleniumDriver: "+ Seleniumdriver);
+//		DesiredCapabilities capability = new DesiredCapabilities();
+//		capability.setCapability("platform", platform);
+//		capability.setBrowserName(browserName);
+//		capability.setCapability("version", platformVersion);
+//		capability.setCapability("name",  "Login test");	
+//	    driver = new RemoteWebDriver(new URL(sauceURL), capability);
 		Thread.sleep(1000);
 		driver.get(AppURL);
 		Thread.sleep(3000);

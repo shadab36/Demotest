@@ -160,7 +160,7 @@ formatter.match({
   "location": "Login_step.he_she_click_on_Login__Register_button()"
 });
 formatter.result({
-  "duration": 3215865334,
+  "duration": 4468677333,
   "status": "passed"
 });
 formatter.match({
@@ -173,7 +173,7 @@ formatter.match({
   "location": "Login_step.Enter_your_email_address_as(String)"
 });
 formatter.result({
-  "duration": 899446222,
+  "duration": 3953539555,
   "status": "passed"
 });
 formatter.match({
@@ -186,14 +186,14 @@ formatter.match({
   "location": "Login_step.Enter_your_password_as(String)"
 });
 formatter.result({
-  "duration": 810515111,
+  "duration": 3711870667,
   "status": "passed"
 });
 formatter.match({
   "location": "Login_step.click_login_cta()"
 });
 formatter.result({
-  "duration": 3370004889,
+  "duration": 4127500889,
   "status": "passed"
 });
 formatter.match({
@@ -206,7 +206,7 @@ formatter.match({
   "location": "Login_step.verify_message_for_email_pass(String)"
 });
 formatter.result({
-  "duration": 1473654222,
+  "duration": 3019119112,
   "status": "passed"
 });
 formatter.scenario({
@@ -261,7 +261,7 @@ formatter.match({
   "location": "Login_step.he_she_click_on_Login__Register_button()"
 });
 formatter.result({
-  "duration": 3216492000,
+  "duration": 3593803111,
   "status": "passed"
 });
 formatter.match({
@@ -274,7 +274,7 @@ formatter.match({
   "location": "Login_step.Enter_your_email_address_as(String)"
 });
 formatter.result({
-  "duration": 1757827111,
+  "duration": 4432926222,
   "status": "passed"
 });
 formatter.match({
@@ -287,14 +287,14 @@ formatter.match({
   "location": "Login_step.Enter_your_password_as(String)"
 });
 formatter.result({
-  "duration": 884024000,
+  "duration": 3605626222,
   "status": "passed"
 });
 formatter.match({
   "location": "Login_step.click_login_cta()"
 });
 formatter.result({
-  "duration": 3255008444,
+  "duration": 3840755111,
   "status": "passed"
 });
 formatter.match({
@@ -307,7 +307,7 @@ formatter.match({
   "location": "Login_step.verify_message_for_email_pass(String)"
 });
 formatter.result({
-  "duration": 1359804889,
+  "duration": 2961440889,
   "status": "passed"
 });
 formatter.scenario({
@@ -362,7 +362,7 @@ formatter.match({
   "location": "Login_step.he_she_click_on_Login__Register_button()"
 });
 formatter.result({
-  "duration": 2889075555,
+  "duration": 3907726222,
   "status": "passed"
 });
 formatter.match({
@@ -375,7 +375,7 @@ formatter.match({
   "location": "Login_step.Enter_your_email_address_as(String)"
 });
 formatter.result({
-  "duration": 1829743556,
+  "duration": 4845338222,
   "status": "passed"
 });
 formatter.match({
@@ -388,14 +388,14 @@ formatter.match({
   "location": "Login_step.Enter_your_password_as(String)"
 });
 formatter.result({
-  "duration": 796596889,
+  "duration": 4929267555,
   "status": "passed"
 });
 formatter.match({
   "location": "Login_step.click_login_cta()"
 });
 formatter.result({
-  "duration": 3626887111,
+  "duration": 5738791112,
   "status": "passed"
 });
 formatter.match({
@@ -408,7 +408,7 @@ formatter.match({
   "location": "Login_step.verify_message_for_email_pass(String)"
 });
 formatter.result({
-  "duration": 1422734667,
+  "duration": 4165169333,
   "status": "passed"
 });
 formatter.scenario({
@@ -463,7 +463,7 @@ formatter.match({
   "location": "Login_step.he_she_click_on_Login__Register_button()"
 });
 formatter.result({
-  "duration": 2788248000,
+  "duration": 6367334222,
   "status": "passed"
 });
 formatter.match({
@@ -476,7 +476,7 @@ formatter.match({
   "location": "Login_step.Enter_your_email_address_as(String)"
 });
 formatter.result({
-  "duration": 1892096000,
+  "duration": 5216657334,
   "status": "passed"
 });
 formatter.match({
@@ -489,14 +489,14 @@ formatter.match({
   "location": "Login_step.Enter_your_password_as(String)"
 });
 formatter.result({
-  "duration": 1565108444,
+  "duration": 4275874666,
   "status": "passed"
 });
 formatter.match({
   "location": "Login_step.click_login_cta()"
 });
 formatter.result({
-  "duration": 3376338667,
+  "duration": 5138101334,
   "status": "passed"
 });
 formatter.match({
@@ -509,7 +509,7 @@ formatter.match({
   "location": "Login_step.verify_message_for_email_pass(String)"
 });
 formatter.result({
-  "duration": 1374608000,
+  "duration": 3066903555,
   "status": "passed"
 });
 formatter.scenario({
@@ -564,7 +564,7 @@ formatter.match({
   "location": "Login_step.he_she_click_on_Login__Register_button()"
 });
 formatter.result({
-  "duration": 3008768889,
+  "duration": 4048509777,
   "status": "passed"
 });
 formatter.match({
@@ -577,7 +577,7 @@ formatter.match({
   "location": "Login_step.Enter_your_email_address_as(String)"
 });
 formatter.result({
-  "duration": 1890309777,
+  "duration": 4803035556,
   "status": "passed"
 });
 formatter.match({
@@ -590,14 +590,14 @@ formatter.match({
   "location": "Login_step.Enter_your_password_as(String)"
 });
 formatter.result({
-  "duration": 1487406667,
+  "duration": 4337431111,
   "status": "passed"
 });
 formatter.match({
   "location": "Login_step.click_login_cta()"
 });
 formatter.result({
-  "duration": 4226080445,
+  "duration": 5397934666,
   "status": "passed"
 });
 formatter.match({
@@ -610,7 +610,7 @@ formatter.match({
   "location": "Login_step.verify_message_for_email_pass(String)"
 });
 formatter.result({
-  "duration": 20179146667,
+  "duration": 20572210667,
   "status": "passed"
 });
 formatter.scenario({
@@ -635,14 +635,14 @@ formatter.match({
   "location": "Logout_step.click_user_profile()"
 });
 formatter.result({
-  "duration": 1574075111,
+  "duration": 2574716445,
   "status": "passed"
 });
 formatter.match({
   "location": "Logout_step.click_on_logout()"
 });
 formatter.result({
-  "duration": 5031570667,
+  "duration": 6606828000,
   "status": "passed"
 });
 });

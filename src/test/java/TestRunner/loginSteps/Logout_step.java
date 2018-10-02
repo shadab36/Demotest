@@ -18,5 +18,6 @@ public class Logout_step extends SetupClass {
 	webelement=	driver.findElement(LogoutObject.logout);
 		Thread.sleep(1000);
 		webelement.click();
+		Thread.sleep(1000);
 	}
 }
