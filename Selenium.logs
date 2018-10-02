@@ -1,0 +1,146 @@
+11:53:40,143 DEBUG org.apache.http.client.protocol.RequestAddCookies<strong>{1}</strong>:123 - CookieSpec selected: default
+11:53:40,159 DEBUG org.apache.http.client.protocol.RequestAuthCache<strong>{1}</strong>:77 - Auth cache not set in the context
+11:53:40,161 DEBUG org.apache.http.impl.conn.PoolingHttpClientConnectionManager<strong>{1}</strong>:255 - Connection request: [route: {}->http://hub-cloud.browserstack.com:80][total kept alive: 0; route allocated: 0 of 2000; total allocated: 0 of 2000]
+11:53:40,186 DEBUG org.apache.http.impl.conn.PoolingHttpClientConnectionManager<strong>{1}</strong>:288 - Connection leased: [id: 0][route: {}->http://hub-cloud.browserstack.com:80][total kept alive: 0; route allocated: 1 of 2000; total allocated: 1 of 2000]
+11:53:40,189 DEBUG org.apache.http.impl.execchain.MainClientExec<strong>{1}</strong>:235 - Opening connection {}->http://hub-cloud.browserstack.com:80
+11:53:40,275 DEBUG org.apache.http.impl.conn.DefaultHttpClientConnectionOperator<strong>{1}</strong>:139 - Connecting to hub-cloud.browserstack.com/185.44.131.194:80
+11:53:40,569 DEBUG org.apache.http.impl.conn.DefaultHttpClientConnectionOperator<strong>{1}</strong>:146 - Connection established 192.168.0.8:51885<->185.44.131.194:80
+11:53:40,571 DEBUG org.apache.http.impl.conn.DefaultManagedHttpClientConnection<strong>{1}</strong>:88 - http-outgoing-0: set socket timeout to 10800000
+11:53:40,572 DEBUG org.apache.http.impl.execchain.MainClientExec<strong>{1}</strong>:256 - Executing request POST /wd/hub/session HTTP/1.1
+11:53:40,572 DEBUG org.apache.http.impl.execchain.MainClientExec<strong>{1}</strong>:261 - Target auth state: UNCHALLENGED
+11:53:40,574 DEBUG org.apache.http.impl.execchain.MainClientExec<strong>{1}</strong>:267 - Proxy auth state: UNCHALLENGED
+11:53:40,581 DEBUG org.apache.http.headers<strong>{1}</strong>:133 - http-outgoing-0 >> POST /wd/hub/session HTTP/1.1
+11:53:40,582 DEBUG org.apache.http.headers<strong>{1}</strong>:136 - http-outgoing-0 >> Content-Type: application/json; charset=utf-8
+11:53:40,582 DEBUG org.apache.http.headers<strong>{1}</strong>:136 - http-outgoing-0 >> Content-Length: 450
+11:53:40,583 DEBUG org.apache.http.headers<strong>{1}</strong>:136 - http-outgoing-0 >> Host: hub-cloud.browserstack.com
+11:53:40,583 DEBUG org.apache.http.headers<strong>{1}</strong>:136 - http-outgoing-0 >> Connection: Keep-Alive
+11:53:40,586 DEBUG org.apache.http.headers<strong>{1}</strong>:136 - http-outgoing-0 >> User-Agent: Apache-HttpClient/4.5.3 (Java/1.8.0_131)
+11:53:40,586 DEBUG org.apache.http.headers<strong>{1}</strong>:136 - http-outgoing-0 >> Accept-Encoding: gzip,deflate
+11:53:40,587 DEBUG org.apache.http.wire<strong>{1}</strong>:73 - http-outgoing-0 >> "POST /wd/hub/session HTTP/1.1[\r][\n]"
+11:53:40,588 DEBUG org.apache.http.wire<strong>{1}</strong>:73 - http-outgoing-0 >> "Content-Type: application/json; charset=utf-8[\r][\n]"
+11:53:40,588 DEBUG org.apache.http.wire<strong>{1}</strong>:73 - http-outgoing-0 >> "Content-Length: 450[\r][\n]"
+11:53:40,588 DEBUG org.apache.http.wire<strong>{1}</strong>:73 - http-outgoing-0 >> "Host: hub-cloud.browserstack.com[\r][\n]"
+11:53:40,589 DEBUG org.apache.http.wire<strong>{1}</strong>:73 - http-outgoing-0 >> "Connection: Keep-Alive[\r][\n]"
+11:53:40,589 DEBUG org.apache.http.wire<strong>{1}</strong>:73 - http-outgoing-0 >> "User-Agent: Apache-HttpClient/4.5.3 (Java/1.8.0_131)[\r][\n]"
+11:53:40,589 DEBUG org.apache.http.wire<strong>{1}</strong>:73 - http-outgoing-0 >> "Accept-Encoding: gzip,deflate[\r][\n]"
+11:53:40,589 DEBUG org.apache.http.wire<strong>{1}</strong>:73 - http-outgoing-0 >> "[\r][\n]"
+11:53:40,590 DEBUG org.apache.http.wire<strong>{1}</strong>:73 - http-outgoing-0 >> "{[\n]"
+11:53:40,590 DEBUG org.apache.http.wire<strong>{1}</strong>:73 - http-outgoing-0 >> "  "desiredCapabilities": {[\n]"
+11:53:40,590 DEBUG org.apache.http.wire<strong>{1}</strong>:73 - http-outgoing-0 >> "    "name": "Login test",[\n]"
+11:53:40,591 DEBUG org.apache.http.wire<strong>{1}</strong>:73 - http-outgoing-0 >> "    "browserName": "iphone",[\n]"
+11:53:40,591 DEBUG org.apache.http.wire<strong>{1}</strong>:73 - http-outgoing-0 >> "    "version": "11.3",[\n]"
+11:53:40,591 DEBUG org.apache.http.wire<strong>{1}</strong>:73 - http-outgoing-0 >> "    "platform": "iphone"[\n]"
+11:53:40,592 DEBUG org.apache.http.wire<strong>{1}</strong>:73 - http-outgoing-0 >> "  },[\n]"
+11:53:40,592 DEBUG org.apache.http.wire<strong>{1}</strong>:73 - http-outgoing-0 >> "  "requiredCapabilities": {},[\n]"
+11:53:40,592 DEBUG org.apache.http.wire<strong>{1}</strong>:73 - http-outgoing-0 >> "  "capabilities": {[\n]"
+11:53:40,592 DEBUG org.apache.http.wire<strong>{1}</strong>:73 - http-outgoing-0 >> "    "desiredCapabilities": {[\n]"
+11:53:40,592 DEBUG org.apache.http.wire<strong>{1}</strong>:73 - http-outgoing-0 >> "      "name": "Login test",[\n]"
+11:53:40,593 DEBUG org.apache.http.wire<strong>{1}</strong>:73 - http-outgoing-0 >> "      "browserName": "iphone",[\n]"
+11:53:40,593 DEBUG org.apache.http.wire<strong>{1}</strong>:73 - http-outgoing-0 >> "      "version": "11.3",[\n]"
+11:53:40,593 DEBUG org.apache.http.wire<strong>{1}</strong>:73 - http-outgoing-0 >> "      "platform": "iphone"[\n]"
+11:53:40,593 DEBUG org.apache.http.wire<strong>{1}</strong>:73 - http-outgoing-0 >> "    },[\n]"
+11:53:40,593 DEBUG org.apache.http.wire<strong>{1}</strong>:73 - http-outgoing-0 >> "    "requiredCapabilities": {},[\n]"
+11:53:40,593 DEBUG org.apache.http.wire<strong>{1}</strong>:73 - http-outgoing-0 >> "    "alwaysMatch": {[\n]"
+11:53:40,594 DEBUG org.apache.http.wire<strong>{1}</strong>:73 - http-outgoing-0 >> "      "browserName": "iphone"[\n]"
+11:53:40,594 DEBUG org.apache.http.wire<strong>{1}</strong>:73 - http-outgoing-0 >> "    },[\n]"
+11:53:40,594 DEBUG org.apache.http.wire<strong>{1}</strong>:73 - http-outgoing-0 >> "    "firstMatch": [][\n]"
+11:53:40,594 DEBUG org.apache.http.wire<strong>{1}</strong>:73 - http-outgoing-0 >> "  }[\n]"
+11:53:40,595 DEBUG org.apache.http.wire<strong>{1}</strong>:87 - http-outgoing-0 >> "}"
+11:53:40,950 DEBUG org.apache.http.wire<strong>{1}</strong>:73 - http-outgoing-0 << "HTTP/1.1 401 Unauthorized[\r][\n]"
+11:53:40,950 DEBUG org.apache.http.wire<strong>{1}</strong>:73 - http-outgoing-0 << "Server: nginx/1.10.1[\r][\n]"
+11:53:40,950 DEBUG org.apache.http.wire<strong>{1}</strong>:73 - http-outgoing-0 << "Date: Tue, 02 Oct 2018 06:23:38 GMT[\r][\n]"
+11:53:40,951 DEBUG org.apache.http.wire<strong>{1}</strong>:73 - http-outgoing-0 << "Content-Type: application/text; charset=utf-8[\r][\n]"
+11:53:40,951 DEBUG org.apache.http.wire<strong>{1}</strong>:73 - http-outgoing-0 << "Transfer-Encoding: chunked[\r][\n]"
+11:53:40,951 DEBUG org.apache.http.wire<strong>{1}</strong>:73 - http-outgoing-0 << "Connection: keep-alive[\r][\n]"
+11:53:40,952 DEBUG org.apache.http.wire<strong>{1}</strong>:73 - http-outgoing-0 << "accept: application/text[\r][\n]"
+11:53:40,952 DEBUG org.apache.http.wire<strong>{1}</strong>:73 - http-outgoing-0 << "WWW-Authenticate: Basic realm="BrowserStack Selenium Hub"[\r][\n]"
+11:53:40,952 DEBUG org.apache.http.wire<strong>{1}</strong>:73 - http-outgoing-0 << "[\r][\n]"
+11:53:40,952 DEBUG org.apache.http.wire<strong>{1}</strong>:73 - http-outgoing-0 << "16[\r][\n]"
+11:53:40,953 DEBUG org.apache.http.wire<strong>{1}</strong>:73 - http-outgoing-0 << "Authorization required[\r][\n]"
+11:53:40,953 DEBUG org.apache.http.wire<strong>{1}</strong>:73 - http-outgoing-0 << "0[\r][\n]"
+11:53:40,953 DEBUG org.apache.http.wire<strong>{1}</strong>:73 - http-outgoing-0 << "[\r][\n]"
+11:53:40,957 DEBUG org.apache.http.headers<strong>{1}</strong>:122 - http-outgoing-0 << HTTP/1.1 401 Unauthorized
+11:53:40,958 DEBUG org.apache.http.headers<strong>{1}</strong>:125 - http-outgoing-0 << Server: nginx/1.10.1
+11:53:40,958 DEBUG org.apache.http.headers<strong>{1}</strong>:125 - http-outgoing-0 << Date: Tue, 02 Oct 2018 06:23:38 GMT
+11:53:40,958 DEBUG org.apache.http.headers<strong>{1}</strong>:125 - http-outgoing-0 << Content-Type: application/text; charset=utf-8
+11:53:40,958 DEBUG org.apache.http.headers<strong>{1}</strong>:125 - http-outgoing-0 << Transfer-Encoding: chunked
+11:53:40,958 DEBUG org.apache.http.headers<strong>{1}</strong>:125 - http-outgoing-0 << Connection: keep-alive
+11:53:40,959 DEBUG org.apache.http.headers<strong>{1}</strong>:125 - http-outgoing-0 << accept: application/text
+11:53:40,959 DEBUG org.apache.http.headers<strong>{1}</strong>:125 - http-outgoing-0 << WWW-Authenticate: Basic realm="BrowserStack Selenium Hub"
+11:53:40,966 DEBUG org.apache.http.impl.execchain.MainClientExec<strong>{1}</strong>:285 - Connection can be kept alive indefinitely
+11:53:40,966 DEBUG org.apache.http.impl.auth.HttpAuthenticator<strong>{1}</strong>:77 - Authentication required
+11:53:40,966 DEBUG org.apache.http.impl.auth.HttpAuthenticator<strong>{1}</strong>:107 - hub-cloud.browserstack.com:80 requested authentication
+11:53:40,967 DEBUG org.apache.http.impl.client.TargetAuthenticationStrategy<strong>{1}</strong>:175 - Authentication schemes in the order of preference: [Negotiate, Kerberos, NTLM, Digest, Basic]
+11:53:40,967 DEBUG org.apache.http.impl.client.TargetAuthenticationStrategy<strong>{1}</strong>:204 - Challenge for Negotiate authentication scheme not available
+11:53:40,967 DEBUG org.apache.http.impl.client.TargetAuthenticationStrategy<strong>{1}</strong>:204 - Challenge for Kerberos authentication scheme not available
+11:53:40,967 DEBUG org.apache.http.impl.client.TargetAuthenticationStrategy<strong>{1}</strong>:204 - Challenge for NTLM authentication scheme not available
+11:53:40,967 DEBUG org.apache.http.impl.client.TargetAuthenticationStrategy<strong>{1}</strong>:204 - Challenge for Digest authentication scheme not available
+11:53:40,970 DEBUG org.apache.http.impl.auth.HttpAuthenticator<strong>{1}</strong>:157 - Selected authentication options: [BASIC [complete=true]]
+11:53:40,971 DEBUG org.apache.http.impl.conn.DefaultManagedHttpClientConnection<strong>{1}</strong>:88 - http-outgoing-0: set socket timeout to 10800000
+11:53:40,972 DEBUG org.apache.http.impl.execchain.MainClientExec<strong>{1}</strong>:256 - Executing request POST /wd/hub/session HTTP/1.1
+11:53:40,972 DEBUG org.apache.http.impl.execchain.MainClientExec<strong>{1}</strong>:261 - Target auth state: CHALLENGED
+11:53:40,972 DEBUG org.apache.http.impl.auth.HttpAuthenticator<strong>{1}</strong>:198 - Generating response to an authentication challenge using basic scheme
+11:53:40,978 DEBUG org.apache.http.impl.execchain.MainClientExec<strong>{1}</strong>:267 - Proxy auth state: UNCHALLENGED
+11:53:40,979 DEBUG org.apache.http.headers<strong>{1}</strong>:133 - http-outgoing-0 >> POST /wd/hub/session HTTP/1.1
+11:53:40,979 DEBUG org.apache.http.headers<strong>{1}</strong>:136 - http-outgoing-0 >> Content-Type: application/json; charset=utf-8
+11:53:40,979 DEBUG org.apache.http.headers<strong>{1}</strong>:136 - http-outgoing-0 >> Content-Length: 450
+11:53:40,979 DEBUG org.apache.http.headers<strong>{1}</strong>:136 - http-outgoing-0 >> Host: hub-cloud.browserstack.com
+11:53:40,979 DEBUG org.apache.http.headers<strong>{1}</strong>:136 - http-outgoing-0 >> Connection: Keep-Alive
+11:53:40,980 DEBUG org.apache.http.headers<strong>{1}</strong>:136 - http-outgoing-0 >> User-Agent: Apache-HttpClient/4.5.3 (Java/1.8.0_131)
+11:53:40,980 DEBUG org.apache.http.headers<strong>{1}</strong>:136 - http-outgoing-0 >> Accept-Encoding: gzip,deflate
+11:53:40,980 DEBUG org.apache.http.headers<strong>{1}</strong>:136 - http-outgoing-0 >> Authorization: Basic c2hhZGFic2hhaWtoOkdmZU5WYWtkRTdxQ3h1MlF5UnFv
+11:53:40,980 DEBUG org.apache.http.wire<strong>{1}</strong>:73 - http-outgoing-0 >> "POST /wd/hub/session HTTP/1.1[\r][\n]"
+11:53:40,981 DEBUG org.apache.http.wire<strong>{1}</strong>:73 - http-outgoing-0 >> "Content-Type: application/json; charset=utf-8[\r][\n]"
+11:53:40,981 DEBUG org.apache.http.wire<strong>{1}</strong>:73 - http-outgoing-0 >> "Content-Length: 450[\r][\n]"
+11:53:40,981 DEBUG org.apache.http.wire<strong>{1}</strong>:73 - http-outgoing-0 >> "Host: hub-cloud.browserstack.com[\r][\n]"
+11:53:40,981 DEBUG org.apache.http.wire<strong>{1}</strong>:73 - http-outgoing-0 >> "Connection: Keep-Alive[\r][\n]"
+11:53:40,981 DEBUG org.apache.http.wire<strong>{1}</strong>:73 - http-outgoing-0 >> "User-Agent: Apache-HttpClient/4.5.3 (Java/1.8.0_131)[\r][\n]"
+11:53:40,981 DEBUG org.apache.http.wire<strong>{1}</strong>:73 - http-outgoing-0 >> "Accept-Encoding: gzip,deflate[\r][\n]"
+11:53:40,981 DEBUG org.apache.http.wire<strong>{1}</strong>:73 - http-outgoing-0 >> "Authorization: Basic c2hhZGFic2hhaWtoOkdmZU5WYWtkRTdxQ3h1MlF5UnFv[\r][\n]"
+11:53:40,982 DEBUG org.apache.http.wire<strong>{1}</strong>:73 - http-outgoing-0 >> "[\r][\n]"
+11:53:40,988 DEBUG org.apache.http.wire<strong>{1}</strong>:73 - http-outgoing-0 >> "{[\n]"
+11:53:40,988 DEBUG org.apache.http.wire<strong>{1}</strong>:73 - http-outgoing-0 >> "  "desiredCapabilities": {[\n]"
+11:53:40,988 DEBUG org.apache.http.wire<strong>{1}</strong>:73 - http-outgoing-0 >> "    "name": "Login test",[\n]"
+11:53:40,989 DEBUG org.apache.http.wire<strong>{1}</strong>:73 - http-outgoing-0 >> "    "browserName": "iphone",[\n]"
+11:53:40,989 DEBUG org.apache.http.wire<strong>{1}</strong>:73 - http-outgoing-0 >> "    "version": "11.3",[\n]"
+11:53:40,989 DEBUG org.apache.http.wire<strong>{1}</strong>:73 - http-outgoing-0 >> "    "platform": "iphone"[\n]"
+11:53:40,990 DEBUG org.apache.http.wire<strong>{1}</strong>:73 - http-outgoing-0 >> "  },[\n]"
+11:53:40,990 DEBUG org.apache.http.wire<strong>{1}</strong>:73 - http-outgoing-0 >> "  "requiredCapabilities": {},[\n]"
+11:53:40,990 DEBUG org.apache.http.wire<strong>{1}</strong>:73 - http-outgoing-0 >> "  "capabilities": {[\n]"
+11:53:40,990 DEBUG org.apache.http.wire<strong>{1}</strong>:73 - http-outgoing-0 >> "    "desiredCapabilities": {[\n]"
+11:53:40,991 DEBUG org.apache.http.wire<strong>{1}</strong>:73 - http-outgoing-0 >> "      "name": "Login test",[\n]"
+11:53:40,991 DEBUG org.apache.http.wire<strong>{1}</strong>:73 - http-outgoing-0 >> "      "browserName": "iphone",[\n]"
+11:53:40,991 DEBUG org.apache.http.wire<strong>{1}</strong>:73 - http-outgoing-0 >> "      "version": "11.3",[\n]"
+11:53:40,992 DEBUG org.apache.http.wire<strong>{1}</strong>:73 - http-outgoing-0 >> "      "platform": "iphone"[\n]"
+11:53:40,992 DEBUG org.apache.http.wire<strong>{1}</strong>:73 - http-outgoing-0 >> "    },[\n]"
+11:53:40,992 DEBUG org.apache.http.wire<strong>{1}</strong>:73 - http-outgoing-0 >> "    "requiredCapabilities": {},[\n]"
+11:53:40,993 DEBUG org.apache.http.wire<strong>{1}</strong>:73 - http-outgoing-0 >> "    "alwaysMatch": {[\n]"
+11:53:40,993 DEBUG org.apache.http.wire<strong>{1}</strong>:73 - http-outgoing-0 >> "      "browserName": "iphone"[\n]"
+11:53:40,993 DEBUG org.apache.http.wire<strong>{1}</strong>:73 - http-outgoing-0 >> "    },[\n]"
+11:53:40,993 DEBUG org.apache.http.wire<strong>{1}</strong>:73 - http-outgoing-0 >> "    "firstMatch": [][\n]"
+11:53:40,993 DEBUG org.apache.http.wire<strong>{1}</strong>:73 - http-outgoing-0 >> "  }[\n]"
+11:53:40,993 DEBUG org.apache.http.wire<strong>{1}</strong>:87 - http-outgoing-0 >> "}"
+11:53:41,699 DEBUG org.apache.http.wire<strong>{1}</strong>:73 - http-outgoing-0 << "HTTP/1.1 200 OK[\r][\n]"
+11:53:41,699 DEBUG org.apache.http.wire<strong>{1}</strong>:73 - http-outgoing-0 << "Server: nginx/1.10.1[\r][\n]"
+11:53:41,699 DEBUG org.apache.http.wire<strong>{1}</strong>:73 - http-outgoing-0 << "Date: Tue, 02 Oct 2018 06:23:39 GMT[\r][\n]"
+11:53:41,699 DEBUG org.apache.http.wire<strong>{1}</strong>:73 - http-outgoing-0 << "Content-Type: application/json; charset=utf-8[\r][\n]"
+11:53:41,700 DEBUG org.apache.http.wire<strong>{1}</strong>:73 - http-outgoing-0 << "Transfer-Encoding: chunked[\r][\n]"
+11:53:41,700 DEBUG org.apache.http.wire<strong>{1}</strong>:73 - http-outgoing-0 << "Connection: keep-alive[\r][\n]"
+11:53:41,700 DEBUG org.apache.http.wire<strong>{1}</strong>:73 - http-outgoing-0 << "cache-control: no-cache[\r][\n]"
+11:53:41,700 DEBUG org.apache.http.wire<strong>{1}</strong>:73 - http-outgoing-0 << "[\r][\n]"
+11:53:41,700 DEBUG org.apache.http.wire<strong>{1}</strong>:73 - http-outgoing-0 << "5e[\r][\n]"
+11:53:41,701 DEBUG org.apache.http.wire<strong>{1}</strong>:73 - http-outgoing-0 << "{"value":{"message":"Version 11.3 not supported for ios devices."},"sessionId":"","status":13}[\r][\n]"
+11:53:41,701 DEBUG org.apache.http.wire<strong>{1}</strong>:73 - http-outgoing-0 << "0[\r][\n]"
+11:53:41,701 DEBUG org.apache.http.wire<strong>{1}</strong>:73 - http-outgoing-0 << "[\r][\n]"
+11:53:41,701 DEBUG org.apache.http.headers<strong>{1}</strong>:122 - http-outgoing-0 << HTTP/1.1 200 OK
+11:53:41,701 DEBUG org.apache.http.headers<strong>{1}</strong>:125 - http-outgoing-0 << Server: nginx/1.10.1
+11:53:41,702 DEBUG org.apache.http.headers<strong>{1}</strong>:125 - http-outgoing-0 << Date: Tue, 02 Oct 2018 06:23:39 GMT
+11:53:41,702 DEBUG org.apache.http.headers<strong>{1}</strong>:125 - http-outgoing-0 << Content-Type: application/json; charset=utf-8
+11:53:41,702 DEBUG org.apache.http.headers<strong>{1}</strong>:125 - http-outgoing-0 << Transfer-Encoding: chunked
+11:53:41,702 DEBUG org.apache.http.headers<strong>{1}</strong>:125 - http-outgoing-0 << Connection: keep-alive
+11:53:41,702 DEBUG org.apache.http.headers<strong>{1}</strong>:125 - http-outgoing-0 << cache-control: no-cache
+11:53:41,702 DEBUG org.apache.http.impl.execchain.MainClientExec<strong>{1}</strong>:285 - Connection can be kept alive indefinitely
+11:53:41,702 DEBUG org.apache.http.impl.auth.HttpAuthenticator<strong>{1}</strong>:86 - Authentication succeeded
+11:53:41,703 DEBUG org.apache.http.impl.client.TargetAuthenticationStrategy<strong>{1}</strong>:228 - Caching 'basic' auth scheme for http://hub-cloud.browserstack.com:80
+11:53:41,730 DEBUG org.apache.http.impl.conn.PoolingHttpClientConnectionManager<strong>{1}</strong>:320 - Connection [id: 0][route: {}->http://hub-cloud.browserstack.com:80] can be kept alive indefinitely
+11:53:41,731 DEBUG org.apache.http.impl.conn.PoolingHttpClientConnectionManager<strong>{1}</strong>:326 - Connection released: [id: 0][route: {}->http://hub-cloud.browserstack.com:80][total kept alive: 1; route allocated: 1 of 2000; total allocated: 1 of 2000]
