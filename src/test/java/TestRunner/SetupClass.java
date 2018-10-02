@@ -66,6 +66,7 @@ public class SetupClass {
 		DesiredCapabilities capability = new DesiredCapabilities();
 		capability.setCapability("platform", platform);
 		capability.setBrowserName(browserName);
+		capability.setCapability("browserstack.local", "true");
 		capability.setCapability("version", platformVersion);
 		capability.setCapability("name",  "Login test");	
 	    driver = new RemoteWebDriver(new URL(sauceURL), capability);  
