@@ -80,6 +80,7 @@ public class Login_step extends SetupClass {
 
 	@Then("^Verify \"([^\"]*)\" message for email address and password\\.$")
 	public void verify_message_for_email_pass(String loginVal) throws InterruptedException {
+		try {
 		boolean logintext = driver.findElements(LoginObject.Loginval).size() > 0;
 		if (logintext) {
 			String Sigin_Val = driver.findElement(LoginObject.Loginval).getText();
@@ -89,6 +90,10 @@ public class Login_step extends SetupClass {
 			System.out.println(loginVal);
 			Thread.sleep(1000);
 			System.out.println(Sigin_Val);
+		}
+		}
+		catch(Exception e) {
+			
 		}
 
 	}
