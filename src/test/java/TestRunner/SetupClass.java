@@ -63,13 +63,15 @@ public class SetupClass {
 		System.out.println("BrowerName: "+  browserName);
 		System.out.println("platform vesion: "+  platformVersion);
 		System.out.println("seleniumDriver: "+ Seleniumdriver);
-		DesiredCapabilities capability = new DesiredCapabilities();
-		capability.setCapability("platform", platform);
-		capability.setBrowserName(browserName);
-		capability.setCapability("browserstack.local", "true");
-		capability.setCapability("version", platformVersion);
-		capability.setCapability("name",  "Login test");	
-	    driver = new RemoteWebDriver(new URL(sauceURL), capability);  
+		DesiredCapabilities caps = new DesiredCapabilities();
+		
+		
+	    caps.setCapability("browserName", "Android");
+	    caps.setCapability("device", "Samsung Galaxy S9");
+	    caps.setCapability("realMobile", "true");
+	    caps.setCapability("os_version", "8.0");
+	    driver = new RemoteWebDriver(new URL(sauceURL), caps);
+
 	   
 			
 			
