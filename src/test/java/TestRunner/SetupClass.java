@@ -11,15 +11,12 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.firefox.FirefoxDriver;
-import org.openqa.selenium.ie.InternetExplorerDriver;
+
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-import io.appium.java_client.android.AndroidDriver;
 
 public class SetupClass {
 	public static WebDriver driver;
@@ -55,12 +52,6 @@ public class SetupClass {
 		AppURL = property.getProperty("App_url");
 		System.out.println("Bname=====" + AppURL);
 		
-		
-		
-		
-		
-		
-
 		browserName = System.getenv("SELENIUM_BROWSER");
 		platform = System.getenv("SELENIUM_PLATFORM");
 		platformVersion = System.getenv("SELENIUM_VERSION");

@@ -72,7 +72,7 @@ public class Login_step extends SetupClass {
 		wait.until(ExpectedConditions.elementToBeClickable(LoginObject.login_Button));
 		 webelement= driver.findElement(LoginObject.login_Button);
 			 js.executeScript("arguments[0].click();", webelement);
-			  Thread.sleep(1500);
+			  Thread.sleep(1000);
 				log.info("click on login CTA");
 				
 		} catch (Exception e) {
@@ -84,6 +84,7 @@ public class Login_step extends SetupClass {
 		try {
 		boolean logintext = driver.findElements(LoginObject.Loginval).size() > 0;
 		if (logintext) {
+			System.out.println(loginVal);
 			String Sigin_Val = driver.findElement(LoginObject.Loginval).getText();
 			System.out.println(Sigin_Val);
 			wait.implictywait(driver);
