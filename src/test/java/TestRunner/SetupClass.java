@@ -56,13 +56,6 @@ public class SetupClass {
 
 		AppURL = property.getProperty("App_url");
 		System.out.println("Bname=====" + AppURL);
-		DesiredCapabilities cab = new DesiredCapabilities();
-		cab.setCapability("deviceName", "ZW2223XXGX");
-		cab.setCapability("platformName", "Android");
-		cab.setCapability("platformVersion", "7.1.1");
-		cab.setBrowserName("chrome");
-		driver = new AndroidDriver(new URL("http://0.0.0.0:4723/wd/hub"), cab);
-		Thread.sleep(2000);
 		browserName = System.getenv("SELENIUM_BROWSER");
 		platform = System.getenv("SELENIUM_PLATFORM");
 		platformVersion = System.getenv("SELENIUM_VERSION");
