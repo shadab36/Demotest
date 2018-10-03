@@ -3,6 +3,7 @@ package TestRunner.loginSteps;
 import java.util.concurrent.TimeUnit;
 import org.junit.Assert;
 import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import ObjectRepository.SignUpObject;
 import TestRunner.SetupClass;
@@ -13,14 +14,14 @@ public class SignUp_Step extends SetupClass {
 	PerformAction action = new PerformAction();
 	JavascriptExecutor js = (JavascriptExecutor) driver;
 	Actions act = new Actions(driver);
-
+	
 	@Then("^click on Login / Register Button\\.$")
 	public void he_she_click_on_Login__Register_button() {
 		try {
 			webelement = driver.findElement(SignUpObject.login_register);
 			if (webelement.isEnabled()) {
 				js.executeScript("arguments[0].click();", webelement);
-				action.implictywait(driver);
+				Thread.sleep(1000);
 			}
 		} catch (Exception e) {
 		}
@@ -32,7 +33,7 @@ public class SignUp_Step extends SetupClass {
 			webelement = driver.findElement(SignUpObject.CreateAccount);
 			if (webelement.isEnabled()) {
 				js.executeScript("arguments[0].click();", webelement);
-				action.implictywait(driver);
+				Thread.sleep(1000);
 			
 			log.info("It's clicking on register link");
 			}
@@ -43,55 +44,66 @@ public class SignUp_Step extends SetupClass {
 
 	@Then("^Enter Full Name as \"([^\"]*)\"\\.$")
 	public void he_she_provides_the_Full_Name_as(String FullName) throws InterruptedException {
+		try {
 		webelement = driver.findElement(SignUpObject.FullName);
-
-		act.click(webelement).build().perform();
+		action.implictywait(driver);
+		js.executeScript("arguments[0].click();", webelement);
 		action.implictywait(driver);
 		webelement.clear();
 		action.implictywait(driver);
-		act.sendKeys(FullName).build().perform();
+		webelement.clear();
+		action.implictywait(driver);
+		webelement.sendKeys(FullName);
 		action.implictywait(driver);
 		log.info("It's entering the user email Address");
+		} catch (Exception e) {
 
+		}
 	}
 
 	@Then("^Enter Email address as \"([^\"]*)\"\\.$")
 	public void Enter_the_Email_address_as(String emailAddress) {
 		try {
 			webelement = driver.findElement(SignUpObject.Email);
-			act.click(webelement).build().perform();
+			action.implictywait(driver);
+			js.executeScript("arguments[0].click();", webelement);
+			action.implictywait(driver);
 			webelement.clear();
 			action.implictywait(driver);
-			act.sendKeys(emailAddress).build().perform();
+			webelement.sendKeys(emailAddress);
 			action.implictywait(driver);
 			log.info("It's entering the email Address");
 		} catch (Exception e) {
+
 		}
 	}
 
 	@Then("^Enter password as \"([^\"]*)\"\\.$")
 	public void Enter_the_password_as(String password) {
-
+	try {
 		webelement = driver.findElement(SignUpObject.Password);
-		act.click(webelement).build().perform();
+		action.implictywait(driver);
+		js.executeScript("arguments[0].click();", webelement);
 		action.implictywait(driver);
 		webelement.clear();
 		action.implictywait(driver);
-		act.sendKeys(password).build().perform();
+		webelement.sendKeys(password);
 		action.implictywait(driver);
 		log.info("It's entering the password");
+	} catch (Exception e) {
 
+	}
 	}
 
 	@Then("^Enter repeat_password as \"([^\"]*)\"\\.$")
 	public void Enter_the_repeat_password_as(String Confirm_pswd) {
 		try {
 			webelement = driver.findElement(SignUpObject.Repeatpassword);
-			act.click(webelement).build().perform();
+			js.executeScript("arguments[0].click();", webelement);
 			action.implictywait(driver);
 			webelement.clear();
 			action.implictywait(driver);
-			act.sendKeys(Confirm_pswd).build().perform();
+			webelement.sendKeys(Confirm_pswd);
 			action.implictywait(driver);
 			log.info("It's entering the confirm password");
 		} catch (Exception e) {
@@ -102,24 +114,23 @@ public class SignUp_Step extends SetupClass {
 	public void click_on_the_save_button() throws InterruptedException {
 
 		webelement = driver.findElement(SignUpObject.Save);
-		js.executeScript("scroll(0,300);");
-		webelement.click();
+	//	js.executeScript("scroll(0,400);");
 		Thread.sleep(1000);
-	}
+		webelement.click();
+		//js.executeScript("arguments[0].click();", webelement);
+		Thread.sleep(1000);
 
+	
+
+	}
 	@Then("^Verify \"([^\"]*)\" validation message for Full Name\\.$")
 	public void Verify_for_validation_message_for_user_Full_Name(String FullNameval) {
 		try {
-			boolean isPresent = driver.findElements(SignUpObject.Full_NameVal).size() > 0;
-			if (isPresent) {
+			WebElement FName_Error = driver.findElement(SignUpObject.Full_NameVal);
+			if (FName_Error.isEnabled()) {
 				String Pass_validation = driver.findElement(SignUpObject.Full_NameVal).getText();
-				System.out.println(Pass_validation);
 				Assert.assertEquals(Pass_validation, FullNameval);
 				driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
-				String script = "return  driver.findElement(SignUpObject.Full_NameVal).getText();";
-				 String telno1 = ((JavascriptExecutor) driver).executeScript(script).toString();
-				 System.out.println(script);
-				 System.out.println(telno1);
 			}
 		} catch (Exception e) {
 			e.printStackTrace();
@@ -130,8 +141,8 @@ public class SignUp_Step extends SetupClass {
 	@Then("^Verify \"([^\"]*)\" validation message for user email address\\.$")
 	public void Verify_for_validation_message_for_user_user_email_address(String email) {
 
-		boolean isPresent = driver.findElements(SignUpObject.Email_AddressVal).size() > 0;
-		if (isPresent) {
+		WebElement Email_error = driver.findElement(SignUpObject.Email_AddressVal);
+		if (Email_error.isEnabled()) {
 			String Email_validation = driver.findElement(SignUpObject.Email_AddressVal).getText();
 			Assert.assertEquals(Email_validation, email);
 			driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
@@ -144,8 +155,8 @@ public class SignUp_Step extends SetupClass {
 	public void verify_for_validation_message_for_password(String passwordVal) {
 		try {
 
-			boolean isPresent = driver.findElements(SignUpObject.password_errormessage).size() > 0;
-			if (isPresent) {
+			WebElement password_Error = driver.findElement(SignUpObject.password_errormessage);
+			if (password_Error.isEnabled()) {
 				String Password_validation = driver.findElement(SignUpObject.password_errormessage).getText();
 				driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 				Assert.assertEquals(Password_validation, passwordVal);
@@ -161,10 +172,12 @@ public class SignUp_Step extends SetupClass {
 	@Then("^Verify \"([^\"]*)\" validation message for repeat password\\.$")
 	public void verify_for_validation_message_for_repeat_password(String repeatVal) {
 		try {
-			boolean isPresent = driver.findElements(SignUpObject.repeat_errormessage).size() > 0;
-			if (isPresent) {
+			WebElement Rpassword_Error= driver.findElement(SignUpObject.repeat_errormessage);
+			if (Rpassword_Error.isEnabled()) {
+				System.out.println("qa checking " + repeatVal );
 				String repeat_validation = driver.findElement(SignUpObject.repeat_errormessage).getText();
 				driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+				System.out.println("element text get value" + repeat_validation);
 				Assert.assertEquals(repeat_validation, repeatVal);
 				driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 
@@ -180,11 +193,14 @@ public class SignUp_Step extends SetupClass {
 
 		try {
 
-			boolean isPresent = driver.findElements(SignUpObject.Signup_errormessage).size() > 0;
-			if (isPresent) {
+			WebElement SigunUp_Error = driver.findElement(SignUpObject.Signup_errormessage);
+			if (SigunUp_Error.isEnabled()) {
 				String error_validation = driver.findElement(SignUpObject.Signup_errormessage).getText();
-				System.out.println(error_validation);
+				driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 				Assert.assertEquals(error_validation, Error);
+				driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+//				System.out.println("get value" + error_validation);
+//				System.out.println(Error);
 			}
 		} catch (Exception e) {
 			e.printStackTrace();

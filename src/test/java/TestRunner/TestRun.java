@@ -11,7 +11,7 @@ import cucumber.api.junit.Cucumber;
 @RunWith(Cucumber.class)
 @CucumberOptions(features = {"."}, format ={
 		"pretty", "html:target"},
-tags= {"@LoginTest"})
+tags= {"@signupTest"})
 public class TestRun {
 	@BeforeClass
 	public static void beforeClass() throws Exception {
