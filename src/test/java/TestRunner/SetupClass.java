@@ -56,6 +56,8 @@ public class SetupClass {
 
 		AppURL = property.getProperty("App_url");
 		System.out.println("Bname=====" + AppURL);
+		
+		
 		browserName = System.getenv("SELENIUM_BROWSER");
 		platform = System.getenv("SELENIUM_PLATFORM");
 		platformVersion = System.getenv("SELENIUM_VERSION");
