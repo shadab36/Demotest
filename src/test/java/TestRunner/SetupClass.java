@@ -11,16 +11,10 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.firefox.FirefoxDriver;
-import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
-
-import io.appium.java_client.android.AndroidDriver;
-
 
 public class SetupClass {
 	public static WebDriver driver;
@@ -72,7 +66,7 @@ public class SetupClass {
 		capability.setCapability("version", platformVersion);
 		capability.setCapability("name", "Login test");
 		driver = new RemoteWebDriver(new URL(sauceURL), capability);
-		Thread.sleep(1000);
+		Thread.sleep(2000);
 		driver.get(AppURL);
 		Thread.sleep(2000);
 		try {
@@ -100,7 +94,7 @@ public class SetupClass {
 
 	public static void after_Class() throws InterruptedException {
 
-//		driver.quit();
-//		Thread.sleep(2000);
+		driver.quit();
+		Thread.sleep(2000);
 	}
 }
