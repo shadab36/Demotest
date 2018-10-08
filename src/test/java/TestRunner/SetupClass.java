@@ -11,6 +11,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -50,23 +51,24 @@ public class SetupClass {
 
 		AppURL = property.getProperty("App_url");
 		System.out.println("Bname=====" + AppURL);
-		
-		
-		browserName = System.getenv("SELENIUM_BROWSER");
-		platform = System.getenv("SELENIUM_PLATFORM");
-		platformVersion = System.getenv("SELENIUM_VERSION");
-		Seleniumdriver = System.getenv("SELENIUM_DRIVER");
-		System.out.println("platform :" + platform);
-		System.out.println("BrowerName: " + browserName);
-		System.out.println("platform vesion: " + platformVersion);
-		System.out.println("seleniumDriver: " + Seleniumdriver);
-		DesiredCapabilities capability = new DesiredCapabilities();
-		capability.setCapability("platform", platform);
-		capability.setBrowserName(browserName);
-		capability.setCapability("version", platformVersion);
-		capability.setCapability("name", "Login test");
-		driver = new RemoteWebDriver(new URL(sauceURL), capability);
-		Thread.sleep(2000);
+
+	
+
+		 browserName = System.getenv("SELENIUM_BROWSER");
+		 platform = System.getenv("SELENIUM_PLATFORM");
+		 platformVersion = System.getenv("SELENIUM_VERSION");
+		 Seleniumdriver = System.getenv("SELENIUM_DRIVER");
+		 System.out.println("platform :" + platform);
+		 System.out.println("BrowerName: " + browserName);
+		 System.out.println("platform vesion: " + platformVersion);
+		 System.out.println("seleniumDriver: " + Seleniumdriver);
+		 DesiredCapabilities capability = new DesiredCapabilities();
+		 capability.setCapability("platform", platform);
+		 capability.setBrowserName(browserName);
+		 capability.setCapability("version", platformVersion);
+		 capability.setCapability("name", "Login test");
+		 driver = new RemoteWebDriver(new URL(sauceURL), capability);
+		 Thread.sleep(2000);
 		driver.get(AppURL);
 		Thread.sleep(2000);
 		try {

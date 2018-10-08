@@ -11,7 +11,6 @@ import TestRunner.SetupClass;
 import cucumber.api.java.en.And;
 import cucumber.api.java.en.Then;
 import webApp.PerformAction;
-
 public class CardDetailsCheck extends SetupClass {
  PerformAction wait = new PerformAction();
  Actions act = new Actions(driver);
